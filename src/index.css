@@ -9,6 +9,10 @@ body {
   margin: 0;
 }
 
-.primary-font {
+.font-primary {
   font-family: 'Cormorant Garamond', serif;
+}
+
+.my-container {
+  @apply max-w-[1140px] mx-auto px-5 sm:px-10 xl:px-0
 }

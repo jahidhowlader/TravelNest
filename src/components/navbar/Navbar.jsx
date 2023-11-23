@@ -3,7 +3,7 @@ const Navbar = () => {
 
     // border-b shadow-sm border-primary-color
     return (
-        <div className='bg-black text-white'> 
+        <nav className='bg-black text-white'> 
 
             <div className='flex items-center justify-between'>
                 {/* Logo */}
@@ -24,7 +24,7 @@ const Navbar = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </nav>
     );
 };
 
