@@ -13,7 +13,7 @@ export default {
       wide: '.025em',
       wider: '.05em',
       widest: '.25em',
-      custom: '.5em',
+      custom: '.30em',
     },
     colors: {
       'primary-color': '#b85c47',
