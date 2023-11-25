@@ -32,7 +32,11 @@ export default {
       '2xl': '1536px',
       '3xl': '2000px'
     },
-    extend: {},
+    extend: {
+      transitionDuration: {
+        '2000': '2000ms',
+      }
+    },
   },
   plugins: [],
 }

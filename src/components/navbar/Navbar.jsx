@@ -9,7 +9,7 @@ const Navbar = () => {
                 {/* Logo */}
                 <div className='pl-3 md:pl-20 flex flex-col items-center'>
                     <h1 className='text-3xl font-semibold primary-font'>TravelNest</h1>
-                    <p className='text-xs tracking-widest -mt-2 md:mt-0'>Boutiqye Hotel</p>
+                    <p className='text-xs tracking-widest -mt-2 md:mt-0'>Boutique Hotel</p>
                 </div>
 
 

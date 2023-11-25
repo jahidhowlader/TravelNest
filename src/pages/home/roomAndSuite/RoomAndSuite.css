@@ -11,7 +11,7 @@
 
     .slick-active {
         padding: 10px;
-        padding-top: 0px;
+        /* padding-top: 0px; */
         opacity: 1;
     }
 }
@@ -25,6 +25,6 @@
     .slick-active {
         opacity: 1;
         padding: 10px;
-        padding-top: 0px;
+        /* padding-top: 0px; */
     }
 }

@@ -1,0 +1,8 @@
+.slick-dots {
+    text-align: left !important;
+    display: block !important;
+}
+
+.slick-dots li.slick-active button:before {
+    color: #b85c47 !important;
+}
