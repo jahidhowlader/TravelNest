@@ -1,5 +1,11 @@
+// import { useContext } from "react";
+// import { AuthContext } from "../../context/AuthContext";
+import useAuth from "../../hook/useAuth";
 
 const Navbar = () => {
+
+    const {user} = useAuth()
+    console.log(user);
 
     // border-b shadow-sm border-primary-color
     return (
