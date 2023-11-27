@@ -7,13 +7,13 @@ import { Link } from "react-router-dom";
 const MeetingRoomPackage = () => {
     return (
         <>
-            <section className='grid grid-cols-2 my-container items-center'>
+            <section className='grid lg:grid-cols-2 my-container items-center'>
 
                 <div>
-                    <img src="/meeting_room/meeting_room1.jpg" alt="meeting_room" className='w-[540px] h-[510px]' />
+                    <img src="/meeting_room/meeting_room1.jpg" alt="meeting_room" className='w-full lg:w-[540px] h-[300px] sm:h-[400px] md:h-[510px] object-cover' />
                 </div>
 
-                <div className='space-y-4 mx-16'>
+                <div className='space-y-4 lg:mx-16 mt-5 lg:mt-0'>
                     <h2 className='text-4xl primary-font font-bold'>Package 1</h2>
                     <p className='text-primary-color tracking-wider font-medium'>$5 / PERSION</p>
                     <p className="text-lg">Our distinctive style helps inspire and ignite creativity for every meeting and special event.</p>
@@ -38,9 +38,9 @@ const MeetingRoomPackage = () => {
             </section>
 
 
-            <section className='grid grid-cols-2 my-container items-center my-20'>
+            <section className='grid lg:grid-cols-2 my-container items-center my-20'>
 
-                <div className='space-y-4 mx-16'>
+                <div className='space-y-4 lg:mx-16 order-2 lg:order-1 mt-5 lg:mt-0'>
                     <h2 className='text-4xl primary-font font-bold'>Package 11</h2>
                     <p className='text-primary-color tracking-wider font-medium'>$12 / PERSION</p>
                     <p className="text-lg">Our distinctive style helps inspire and ignite creativity for every meeting and special event.</p>
@@ -67,19 +67,19 @@ const MeetingRoomPackage = () => {
                     <button className="bg-primary-color px-5 py-2 rounded-sm text-white ">EMAIL TO BOOK</button>
                 </div>
 
-                <div>
-                    <img src="/meeting_room/meeting_room2.jpg" alt="meeting_room" className='w-[540px] h-[510px]' />
+                <div className="order-1 lg:order-2">
+                    <img src="/meeting_room/meeting_room2.jpg" alt="meeting_room" className='w-full lg:w-[540px] h-[300px] sm:h-[400px] md:h-[510px] object-cover' />
                 </div>
             </section>
 
-            <section className='bg-[#f6f6fa] mt-20 p-20'>
-                <div className="my-container  grid grid-cols-2 items-center">
+            <section className='bg-[#f6f6fa] mt-20 py-20 lg:p-20'>
+                <div className="my-container lg:grid grid-cols-2 items-center">
                     <div>
-                        <img src="/meeting_room/meeting_room3.jpg" alt="meeting_room" className='w-[540px] h-[510px]' />
+                        <img src="/meeting_room/meeting_room3.jpg" alt="meeting_room" className='w-full lg:w-[540px] h-auto object-cover' />
                     </div>
 
-                    <div className='space-y-4 mx-16'>
-                        <h2 className='text-5xl primary-font font-bold'>Floor Plans</h2>
+                    <div className='space-y-4 lg:mx-16 mt-5 lg:mt-0'>
+                        <h2 className='text-4xl lg:text-5xl primary-font font-bold'>Floor Plans</h2>
                         <p className="text-lg">A space where your meetings are productive and comfortable, exactly what you are looking for.</p>
 
                         <ul className="space-y-3">

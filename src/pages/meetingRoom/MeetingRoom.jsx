@@ -6,7 +6,7 @@ const MeetingRoom = () => {
     return (
         <>
             <section className='meeting_room flex justify-center items-center'>
-                <h2 className='text-6xl text-white primary-font font-bold'>Meeting Room</h2>
+                <h2 className='text-4xl lg:text-5xl xl:text-6xl text-white primary-font font-bold'>Meeting Room</h2>
             </section>
 
             <MeetingRoomIntro />

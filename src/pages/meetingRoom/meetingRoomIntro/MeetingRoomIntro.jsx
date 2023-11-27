@@ -7,11 +7,11 @@ const MeetingRoomIntro = () => {
     return (
         <section className='my-container mt-20 mb-28'>
 
-                <div className='w-7/12 mx-auto'>
+                <div className='lg:w-7/12 mx-auto'>
                     <p className='text-2xl primary-font text-center font-semibold'>Our Hotel board room offers a private, elegant meeting space in the heart of New York for groups of 8 to 10 persons. For your comfort and convenience, coffee break packages are available..</p>
 
-                    <div className='grid grid-cols-4 items-center mt-10  text-center'>
-                        <div className='flex flex-col justify-center items-center gap-5'>
+                    <div className='grid grid-cols-2 sm:grid-cols-4 items-center gap-10 sm:gap-0 mt-10  text-center'>
+                        <div className='flex flex-col justify-center items-center gap-5 '>
                             <div className='text-5xl opacity-50 border border-gray border-opacity-30 flex justify-center items-center w-28 h-28 rounded-full'>
                                 <HiOutlineUsers />
                             </div>

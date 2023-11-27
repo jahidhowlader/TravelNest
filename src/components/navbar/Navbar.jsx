@@ -13,7 +13,7 @@ const Navbar = () => {
 
             <div className='flex items-center justify-between'>
                 {/* Logo */}
-                <Link to='/' className='pl-3 md:pl-20 flex flex-col items-center'>
+                <Link to='/' className='ml-3 md:ml-20 flex flex-col items-center'>
                     <h1 className='text-3xl font-semibold primary-font'>TravelNest</h1>
                     <p className='text-xs tracking-widest -mt-2 md:mt-0'>Boutique Hotel</p>
                 </Link>

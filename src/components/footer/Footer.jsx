@@ -26,10 +26,10 @@ const Footer = () => {
 
                         <h5 className="text-2xl font-bold primary-font mb-5 md:mb-8 mt-10 md:mt-3">General</h5>
                         <ul className="space-y-2 md:space-y-5">
-                            <li className="hover:hover:text-primary-color">Accommodation</li>
-                            <li className="hover:hover:text-primary-color">Dine & Drink</li>
-                            <li className="hover:hover:text-primary-color">Spa & Leisure</li>
-                            <li className="hover:hover:text-primary-color">Services</li>
+                            <li className="hover:hover:text-primary-color"><Link to="/about">Accommodation</Link></li>
+                            <li className="hover:hover:text-primary-color"><Link to="/restaurant">Dine & Drink</Link></li>
+                            <li className="hover:hover:text-primary-color"><Link to="/spa">Spa & Leisure</Link></li>
+                            <li className="hover:hover:text-primary-color"><Link to="/meeting_room">Services</Link></li>
                         </ul>
                     </div>
 
@@ -51,8 +51,8 @@ const Footer = () => {
                 <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-5">
                     <ul className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-10">
                         <li>Copyright 2021 by worldwide.co</li>
-                        <li className="hover:text-primary-color">Privacy</li>
-                        <li className="hover:text-primary-color">sitemap</li>
+                        <li className="hover:text-primary-color"><Link to="/privacy">Privacy</Link></li>
+                        <li className="hover:text-primary-color"><Link to="/sitemap">sitemap</Link></li>
                     </ul>
 
                     <ul className="flex items-center gap-2 xl:gap-5">

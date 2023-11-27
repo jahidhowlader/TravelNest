@@ -17,12 +17,12 @@ const Equipements = () => {
                     <h1 className='text-2xl lg:text-3xl xl:text-[40px] py-3 xl:py-5 font-bold primary-font'>Equipements</h1>
 
                     <ul className="space-y-5 sm:space-y-10 mt-5 sm:mt-10 group">
-                        <li className="flex items-center gap-5 text-lg"><PiCar className="text-3xl  md:text-4xl hover:text-primary-color tracking-wider" /> Airport Transfer</li>
-                        <li className="flex items-center gap-5 text-lg"><GiSpoon className="text-3xl  md:text-4xl" /> Fully Equipped Kitchen</li>
-                        <li className="flex items-center gap-5 text-lg"><CiCreditCard1 className="text-3xl  md:text-4xl" /> Card Access Lift</li>
-                        <li className="flex items-center gap-5 text-lg"><IoWifiOutline className="text-3xl  md:text-4xl" /> Fibre Internet</li>
-                        <li className="flex items-center gap-5 text-lg"><BsTv className="text-3xl  md:text-4xl" /> Smart TV</li>
-                        <li className="flex items-center gap-5 text-lg"><GiTowel className="text-3xl md:text-4xl" /> Weekly Housekeeping</li>
+                        <li className="flex items-center gap-5 text-lg tracking-wide"><PiCar className="text-3xl  md:text-4xl hover:text-primary-color" /> Airport Transfer</li>
+                        <li className="flex items-center gap-5 text-lg tracking-wide"><GiSpoon className="text-3xl  md:text-4xl hover:text-primary-color" /> Fully Equipped Kitchen</li>
+                        <li className="flex items-center gap-5 text-lg tracking-wide"><CiCreditCard1 className="text-3xl  md:text-4xl hover:text-primary-color" /> Card Access Lift</li>
+                        <li className="flex items-center gap-5 text-lg tracking-wide"><IoWifiOutline className="text-3xl  md:text-4xl hover:text-primary-color" /> Fibre Internet</li>
+                        <li className="flex items-center gap-5 text-lg tracking-wide"><BsTv className="text-3xl  md:text-4xl hover:text-primary-color" /> Smart TV</li>
+                        <li className="flex items-center gap-5 text-lg tracking-wide"><GiTowel className="text-3xl md:text-4xl hover:text-primary-color" /> Weekly Housekeeping</li>
                     </ul>
                 </div>
                 <div>

@@ -8,6 +8,7 @@ import RoomDetails from "../pages/roomDetails/RoomDetails";
 import About from "../pages/about/About";
 import MeetingRoom from "../pages/meetingRoom/MeetingRoom";
 import Spa from "../pages/spa/Spa";
+import Restaurant from "../pages/restaurant/Restaurant";
 
 export const router = createBrowserRouter([
 
@@ -52,6 +53,10 @@ export const router = createBrowserRouter([
             {
                 path: "/spa",
                 element: <Spa />
+            },
+            {
+                path: "/restaurant",
+                element: <Restaurant />
             },
         ]
     },

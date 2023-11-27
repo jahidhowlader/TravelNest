@@ -19,7 +19,7 @@ const TheHotel = () => {
                         Read more
                     </button> */}
 
-                    <Link href="#_" className="px-5 sm:px-8 py-2 sm:py-2.5 relative rounded-sm group overflow-hidden font-medium text-black inline-block border hover:border-primary-color uppercase text-sm">
+                    <Link to="/about" className="px-5 sm:px-8 py-2 sm:py-2.5 relative rounded-sm group overflow-hidden font-medium text-black inline-block border hover:border-primary-color uppercase text-sm">
                         <span className="absolute bottom-0 left-0 flex w-full h-0 mb-0 transition-all duration-300 ease-out transform bg-primary-color group-hover:h-full opacity-90 "></span>
                         <span className="relative group-hover:text-white">Read more</span>
                     </Link>

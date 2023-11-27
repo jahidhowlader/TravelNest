@@ -2,13 +2,13 @@ import { Link } from "react-router-dom";
 
 const AboutStory = () => {
     return (
-        <section className='grid grid-cols-2 items-center pt-10'>
+        <section className='grid lg:grid-cols-2 items-center pt-10'>
             <div>
-                <img src="/about/about-2.jpg" alt="about" className="w-full max-h-[600px] object-cover"/>
+                <img src="/about/about-2.jpg" alt="about" className="w-full max-h-[450px] lg:max-h-[600px] object-cover"/>
             </div>
 
             {/* Hotel Content */}
-            <div className="flex-1 sm:pr-20 md:pr-5 lg:pl-20 lg:pr-28">
+            <div className="flex-1 m-5 mt-10 lg:m-0 lg:pl-20 lg:pr-28">
                 <span className="flex items-center gap-8">
                     <span className="w-10 h-[1px] bg-black"></span>
                     <span className="font-medium tracking-widest text-xs lg:text-sm text-primary-color">SINCE 2006</span>

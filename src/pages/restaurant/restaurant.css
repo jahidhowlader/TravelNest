@@ -1,5 +1,5 @@
-.aboutUs{
-    background-image: linear-gradient(rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.3)), url('/about/about.jpg');
+.restaurant{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.3)), url('/restaurant/restaurant.jpg');
     background-repeat: no-repeat;
     height: 470px;
     width: 100%;
@@ -8,7 +8,7 @@
 }
 
 @media screen and (max-width: 1024px){
-    .aboutUs{
+    .restaurant{
         height: 300px;
     }
 }

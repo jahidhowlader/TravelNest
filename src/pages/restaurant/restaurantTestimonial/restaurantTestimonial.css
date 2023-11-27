@@ -1,0 +1,22 @@
+.restaurantTestimonialSlider {
+
+    .slick-slide {
+        padding: 0;
+        opacity: 1;
+    }
+
+    .slick-dots {
+        text-align: center !important;
+        display: block !important;
+        margin-bottom: -30px;
+    }
+
+    .slick-dots li:hover button:before {
+        color: black;
+        opacity: .6;
+    }
+
+    .slick-dots li.slick-active button:before {
+        color: #b85c47 !important;
+    }
+}
