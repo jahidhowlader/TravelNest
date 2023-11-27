@@ -1,4 +1,4 @@
-import { PiCar, PiCarLight } from "react-icons/pi";
+import { PiCar } from "react-icons/pi";
 import { CiCreditCard1 } from "react-icons/ci";
 import { IoWifiOutline } from "react-icons/io5";
 import { BsTv } from "react-icons/bs";

@@ -1,5 +1,5 @@
 import Slider from "react-slick";
-import './Testimonial.css'
+import './testimonial.css'
 
 const Testimonial = () => {
 
@@ -44,7 +44,7 @@ const Testimonial = () => {
                         <span className="font-medium tracking-widest text-xs lg:text-sm uppercase text-primary-color">PEOPLE LOVE US</span>
                     </span>
 
-                    <Slider {...settings}>
+                    <Slider {...settings} className="testimonialSlider">
                         <div className="">
                             <h6 className="text-xl md:text-2xl primary-font font-semibold"> {`" It was amazing staying in this hotel! Very helpful staff, clean nice rooms, perfect location and fantastic view from the room! Food and drinks in the restaurant of the hotel were delicious. "`}</h6>
 

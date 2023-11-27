@@ -1,0 +1,7 @@
+.aboutUs{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.3)), url('/about/about.jpg');
+    background-repeat: no-repeat;
+    height: 470px;
+    width: 100%;
+    background-size: cover;
+}

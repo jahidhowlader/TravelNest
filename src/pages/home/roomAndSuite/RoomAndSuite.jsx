@@ -1,7 +1,7 @@
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import './RoomAndSuite.css'
+import './roomAndSuite.css'
 
 
 const RoomAndSuite = () => {
@@ -12,7 +12,7 @@ const RoomAndSuite = () => {
         infinite: true,
         centerPadding: "100px",
         slidesToShow: 3,
-        speed: 2000,
+        speed: 500,
         autoplay: true,
         autoplaySpeed: 5000,
         arrows: false,
@@ -30,7 +30,7 @@ const RoomAndSuite = () => {
                 settings: {
                     centerMode: true,
                     centerPadding: '40px',
-                    slidesToShow: 1
+                    slidesToShow: 1,
                 }
             }
         ]
@@ -51,7 +51,7 @@ const RoomAndSuite = () => {
                 <p className='tracking-wide'>Our hotel offers 30 double, and 5 single rooms as well as 36 suites and junior suites. View All Rooms</p>
             </div>
 
-            <Slider {...settings}>
+            <Slider {...settings} className="roomSuiteSlider">
                 <div className="">
                     <img src="/home/room1.jpg" alt="room1" />
 

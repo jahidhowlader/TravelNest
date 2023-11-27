@@ -1,6 +1,19 @@
 import React from 'react';
+import Slider from 'react-slick';
+import './allRooms.css'
 
 const AllRooms = () => {
+
+    const settings = {
+        dots: true,
+        infinite: false,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+    }
+
+
     return (
         <section className='my-container mt-20 mb-40'>
 
@@ -12,8 +25,15 @@ const AllRooms = () => {
             <div className='space-y-8'>
                 <div className='border border-gray border-opacity-[0.15] grid grid-cols-12 items-center'>
                     {/* IMAGE */}
+
                     <div className='col-span-4'>
-                        <img src="/rooms/rooms1.jpeg" alt="room list" />
+                        <Slider {...settings} className='roomsSilder'>
+                            <img src="/rooms/rooms1.jpeg" alt="room list" className='object-cover h-[370px] w-full' />
+                            <img src="/rooms/rooms11.jpeg" alt="room list" className='object-cover h-[370px] w-full' />
+                            <img src="/rooms/rooms111.jpeg" alt="room list" className='object-cover h-[370px] w-full' />
+                            <img src="/rooms/rooms1111.jpeg" alt="room list" className='object-cover h-[370px] w-full' />
+                            <img src="/rooms/rooms11111.jpeg" alt="room list" className='object-cover h-[370px] w-full' />
+                        </Slider>
                     </div>
 
                     {/* CONTENT */}
@@ -83,7 +103,7 @@ const AllRooms = () => {
                     </div>
                 </div>
 
-                
+
             </div>
         </section>
     );
