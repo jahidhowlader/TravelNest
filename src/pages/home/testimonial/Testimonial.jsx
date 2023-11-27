@@ -33,7 +33,7 @@ const Testimonial = () => {
                         </span>
 
                         <h3 className="primary-font text-xl sm:text-2xl mt-5 mb-3 font-bold hover:text-primary-color">Hotel June’s Upcoming Artist in Residence</h3>
-                        <p>At is a long established fact that a reader will be distracted by the readable...</p>
+                        <p className="tracking-wide">At is a long established fact that a reader will be distracted by the readable...</p>
                     </div>
                 </div>
 

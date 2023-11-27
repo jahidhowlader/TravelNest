@@ -20,7 +20,7 @@ const Login = () => {
     const { register, handleSubmit, reset, formState: { errors }, } = useForm()
 
 
-    const { loading, error, dispatch } = useAuth()
+    const { loading, dispatch } = useAuth()
 
     console.log(loading);
 

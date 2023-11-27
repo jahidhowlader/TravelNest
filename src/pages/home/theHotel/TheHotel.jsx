@@ -13,7 +13,7 @@ const TheHotel = () => {
                         <span className="font-medium tracking-widest text-xs lg:text-sm text-primary-color">SINCE 2006</span>
                     </span>
                     <h1 className='text-2xl lg:text-3xl xl:text-5xl py-3 xl:py-5 font-bold primary-font'>The Hotel</h1>
-                    <p className="pb-7 sm:pb-10 sm:pt-2 text-base xl:text-lg ">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et rhoncus lacus. Aliquam porttitor sit amet diam non placerat. Curabitur convallis, risus ac aliquam imperdiet, tellus ante finibus libero...</p>
+                    <p className="pb-7 sm:pb-10 sm:pt-2 text-base tracking-wide">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et rhoncus lacus. Aliquam porttitor sit amet diam non placerat. Curabitur convallis, risus ac aliquam imperdiet, tellus ante finibus libero...</p>
 
                     {/* <button className="uppercase">
                         Read more

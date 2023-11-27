@@ -48,7 +48,7 @@ const RoomAndSuite = () => {
                     <h1 className='text-2xl lg:text-3xl xl:text-[40px] py-3 xl:py-5 font-bold primary-font'>Rooms & Suites</h1>
                 </div>
                 <span></span>
-                <p className=''>Our hotel offers 30 double, and 5 single rooms as well as 36 suites and junior suites. View All Rooms</p>
+                <p className='tracking-wide'>Our hotel offers 30 double, and 5 single rooms as well as 36 suites and junior suites. View All Rooms</p>
             </div>
 
             <Slider {...settings}>
@@ -57,7 +57,7 @@ const RoomAndSuite = () => {
 
                     <h3 className="primary-font text-xl sm:text-2xl mt-5 mb-3 font-bold hover:text-primary-color">Deluxe Double Room</h3>
 
-                    <div className="flex flex-wrap items-center gap-x-5 sm:gap-10">
+                    <div className="flex flex-wrap items-center gap-x-5 sm:gap-10 ">
                         <span>38m<sup>2</sup></span>
                         <span>2 beds</span>
                         <span>1 bathroom</span>
