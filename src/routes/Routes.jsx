@@ -9,6 +9,8 @@ import About from "../pages/about/About";
 import MeetingRoom from "../pages/meetingRoom/MeetingRoom";
 import Spa from "../pages/spa/Spa";
 import Restaurant from "../pages/restaurant/Restaurant";
+import Reservation from "../pages/reservation/Reservation";
+import BookingList from "../pages/bookingList/BookingList";
 
 export const router = createBrowserRouter([
 
@@ -58,6 +60,14 @@ export const router = createBrowserRouter([
                 path: "/restaurant",
                 element: <Restaurant />
             },
+            {
+                path: "/reservation/:id",
+                element: <Reservation />
+            },
+            {
+                path: "/bookingList",
+                element: <BookingList />
+            }
         ]
     },
 

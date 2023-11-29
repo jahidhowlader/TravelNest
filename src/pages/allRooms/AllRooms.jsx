@@ -41,7 +41,6 @@ const AllRooms = () => {
 
         return dates;
     };
-
     const alldates = getDatesInRange(date[0].startDate, date[0].endDate);
 
     // Check Avaiable Room with User date

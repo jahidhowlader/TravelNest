@@ -6,6 +6,7 @@ import { FiMinus, FiPlus } from 'react-icons/fi';
 import { HiChevronDown } from 'react-icons/hi2';
 import 'react-date-range/dist/styles.css';
 import 'react-date-range/dist/theme/default.css';
+import { Link } from 'react-router-dom'
 
 const BookRoomSidbar = ({ room }) => {
 
@@ -35,7 +36,7 @@ const BookRoomSidbar = ({ room }) => {
         });
     };
 
-    // COUNT ALL DAYS USER SELECTED FOR GET TOTAL PRICE ROOM SERVICES
+    // COUNT ALL DAYS USER SELECTED FOR GET TOTAL PRICE ROOM SERVICES AND STORE DATA IN MONGODB
     const countAllDateOnRange = (startDate, endDate) => {
         const start = new Date(startDate);
         const end = new Date(endDate);
@@ -64,7 +65,7 @@ const BookRoomSidbar = ({ room }) => {
 
 
             {/* DATE RANGE */}
-            <div className='border-b relative'>
+            <div className='border-b relative z-20'>
                 <p className='opacity-50 font-semibold text-sm pb-3 tracking-wider'>CHECK IN - CHECK OUT</p>
                 <p onClick={() => setOpenDate(!openDate)} className='pb-3 font-medium'>{`${format(date[0].startDate, "dd/MM/yyyy")} - ${format(date[0].endDate, "dd/MM/yyyy")}`}</p>
 
@@ -176,7 +177,9 @@ const BookRoomSidbar = ({ room }) => {
                 </div>
             </div>
 
-            <button className='w-full bg-primary-color py-2 text-white font-medium tracking-wide rounded-sm'>BOOK NOW</button>
+            <Link to={`/reservation/${room._id}`} state={{options: options, totalDays: totalDays, date: date, room: room}}>
+                <button className='w-full bg-primary-color py-2 text-white font-medium tracking-wide rounded-sm mt-5'>BOOK NOW</button>
+            </Link>
         </aside>
     );
 };

@@ -1,14 +1,14 @@
 [
     {
-        "roomNumbers": 301,
+        "roomNumbers": "301",
         "unavailableDates": [],
-        "title": "Deluxe Double Room",
+        "title": "Junior Suite",
         "size": "38",
         "type": "Single",
-        "adult_capacity": 2,
-        "children_capacity": 1,
-        "beds": 1,
-        "bathroom": 1,
+        "adult_capacity": "2",
+        "children_capacity": "1",
+        "beds": "1",
+        "bathroom": "1",
         "photos": [
             "https://i.ibb.co/7JgM3br/rooms1.jpg",
             "https://i.ibb.co/P9QLpNm/rooms11.jpg",
@@ -24,24 +24,25 @@
         ],
         "price": 150,
         "rating": null,
-        "featured": false
+        "featured": false,
+        "updatedAt": "2023-11-29T18:28:07.012Z"
     },
     {
-        "roomNumbers": 302,
+        "roomNumbers": "302",
         "unavailableDates": [],
         "title": "Deluxe Double Room",
-        "size": "38",
-        "type": "Single",
-        "adult_capacity": 2,
-        "children_capacity": 1,
-        "beds": 1,
-        "bathroom": 1,
+        "size": "48",
+        "type": "double",
+        "adult_capacity": "4",
+        "children_capacity": "2",
+        "beds": "2",
+        "bathroom": "1",
         "photos": [
-            "https://i.ibb.co/7JgM3br/rooms1.jpg",
-            "https://i.ibb.co/P9QLpNm/rooms11.jpg",
-            "https://i.ibb.co/CW7qtCB/rooms111.jpg",
-            "https://i.ibb.co/5LTp6HZ/rooms1111.jpg",
-            "https://i.ibb.co/tLLxHCt/rooms11111.jpg"
+            "https://i.ibb.co/7kn7Q9g/room2.jpg",
+            "https://i.ibb.co/chBK7rt/rooms2.jpg",
+            "https://i.ibb.co/ZN1tpkF/rooms22.jpg",
+            "https://i.ibb.co/chBK7rt/rooms2.jpg",
+            "https://i.ibb.co/54pGq7j/rooms2222.jpg"
         ],
         "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using ‘Content here, content here’, making it look like readable English.",
         "room_facilities": [
@@ -49,8 +50,175 @@
             "TV",
             "Air Conditioning"
         ],
-        "price": 150,
+        "price": 250,
         "rating": null,
-        "featured": false
+        "featured": false,
+        "updatedAt": "2023-11-29T16:57:23.908Z"
+    },
+    {
+        "roomNumbers": "307",
+        "unavailableDates": [],
+        "title": "Triple Room",
+        "size": "50",
+        "type": "Triple",
+        "adult_capacity": "6",
+        "children_capacity": "3",
+        "beds": "3",
+        "bathroom": "2",
+        "photos": [
+            "https://i.ibb.co/54pGq7j/rooms2222.jpg",
+            "https://i.ibb.co/w7kJYXy/rooms33.jpg",
+            "https://i.ibb.co/VTpdhV5/rooms333.jpg",
+            "https://i.ibb.co/wKS8Pjx/rooms3333.jpg"
+        ],
+        "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using ‘Content here, content here’, making it look like readable English.",
+        "room_facilities": [
+            "Wi-Fi",
+            "TV",
+            "Air Conditioning"
+        ],
+        "price": 350,
+        "rating": null,
+        "featured": false,
+        "updatedAt": "2023-11-29T17:34:31.108Z"
+    },
+    {
+        "roomNumbers": "311",
+        "unavailableDates": [],
+        "title": "Alpine Single Room",
+        "size": "35",
+        "type": "Single",
+        "adult_capacity": "2",
+        "children_capacity": "1",
+        "beds": "1",
+        "bathroom": "1",
+        "photos": [
+            "https://i.ibb.co/WHpNHVY/rooms4.jpg",
+            "https://i.ibb.co/840QDbk/rooms44.jpg",
+            "https://i.ibb.co/wLsTYpd/rooms444.jpg",
+            "https://i.ibb.co/489PfG2/rooms4444.jpg",
+            "https://i.ibb.co/qYqnvTt/rooms44444.jpg"
+        ],
+        "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using ‘Content here, content here’, making it look like readable English.",
+        "room_facilities": [
+            "Wi-Fi",
+            "TV",
+            "Air Conditioning"
+        ],
+        "price": 170,
+        "rating": null,
+        "featured": false,
+        "updatedAt": "2023-11-29T16:57:23.908Z"
+    },
+    {
+        "roomNumbers": "401",
+        "unavailableDates": [],
+        "title": "Standard Single Room",
+        "size": "38",
+        "type": "Single",
+        "adult_capacity": "2",
+        "children_capacity": "1",
+        "beds": "1",
+        "bathroom": "1",
+        "photos": [
+            "https://i.ibb.co/qFNDVg6/rooms5.jpg",
+            "https://i.ibb.co/hCWN4TZ/rooms55.jpg",
+            "https://i.ibb.co/QYcHtxj/rooms555.jpg",
+            "https://i.ibb.co/MNpdt0p/rooms5555.jpg",
+            "https://i.ibb.co/XV84sWm/rooms55555.jpg"
+        ],
+        "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using ‘Content here, content here’, making it look like readable English.",
+        "room_facilities": [
+            "Wi-Fi",
+            "TV",
+            "Air Conditioning"
+        ],
+        "price": 180,
+        "rating": null,
+        "featured": false,
+        "updatedAt": "2023-11-29T18:28:07.012Z"
+    },
+    {
+        "roomNumbers": "402",
+        "unavailableDates": [],
+        "title": "Standard Double Room",
+        "size": "38",
+        "type": "double",
+        "adult_capacity": "4",
+        "children_capacity": "2",
+        "beds": "2",
+        "bathroom": "2",
+        "photos": [
+            "https://i.ibb.co/ZcV5nng/rooms6.jpg",
+            "https://i.ibb.co/XV84sWm/rooms55555.jpg",
+            "https://i.ibb.co/MNpdt0p/rooms5555.jpg",
+            "https://i.ibb.co/QYcHtxj/rooms555.jpg"
+        ],
+        "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using ‘Content here, content here’, making it look like readable English.",
+        "room_facilities": [
+            "Wi-Fi",
+            "TV",
+            "Air Conditioning"
+        ],
+        "price": 400,
+        "rating": null,
+        "featured": false,
+        "updatedAt": "2023-11-29T16:57:23.908Z"
+    },
+    {
+        "roomNumbers": "507",
+        "unavailableDates": [],
+        "title": "Superior Double Room",
+        "size": "45",
+        "type": "Triple",
+        "adult_capacity": "4",
+        "children_capacity": "2",
+        "beds": "2",
+        "bathroom": "2",
+        "photos": [
+            "https://i.ibb.co/840QDbk/rooms44.jpg",
+            "https://i.ibb.co/wLsTYpd/rooms444.jpg",
+            "https://i.ibb.co/r4Z4RV9/rooms777.jpg",
+            "https://i.ibb.co/ZcV5nng/rooms6.jpg",
+            "https://i.ibb.co/d652RY6/rooms77777.jpg"
+        ],
+        "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using ‘Content here, content here’, making it look like readable English.",
+        "room_facilities": [
+            "Wi-Fi",
+            "TV",
+            "Air Conditioning"
+        ],
+        "price": 370,
+        "rating": null,
+        "featured": false,
+        "updatedAt": "2023-11-29T17:34:31.108Z"
+    },
+    {
+        "roomNumbers": "311",
+        "unavailableDates": [],
+        "title": "Family Suite",
+        "size": "50",
+        "type": "Fourth",
+        "adult_capacity": "8",
+        "children_capacity": "4",
+        "beds": "4",
+        "bathroom": "3",
+        "photos": [
+            "https://i.ibb.co/WVYk2nv/rooms8.jpg",
+            "https://i.ibb.co/kmG1hDp/rooms88.jpg",
+            "https://i.ibb.co/186JM2f/rooms888.jpg",
+            "https://i.ibb.co/ctyvSpM/rooms8888.jpg",
+            "https://i.ibb.co/ZcV5nng/rooms6.jpg"
+        ],
+        "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using ‘Content here, content here’, making it look like readable English.",
+        "room_facilities": [
+            "Wi-Fi",
+            "TV",
+            "Air Conditioning"
+        ],
+        "price": 500,
+        "rating": null,
+        "featured": false,
+        "updatedAt": "2023-11-29T16:57:23.908Z"
     }
 ]

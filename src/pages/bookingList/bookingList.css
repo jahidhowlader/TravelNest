@@ -1,0 +1,20 @@
+#cart thead {
+    /* border: 1px solid; */
+}
+
+#cart th {
+    padding: 10px 20px;
+}
+
+#cart td {
+    padding: 10px 10px;
+    border-top: 1px solid #808080;
+}
+
+#cart tr:hover {
+    background-color: #cfdcde;
+}
+
+#cardHead tr:first-child {
+    background-color: #0F5259;
+}
