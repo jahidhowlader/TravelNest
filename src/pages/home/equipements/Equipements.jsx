@@ -32,7 +32,7 @@ const Equipements = () => {
                     </div>
                 </div>
                 <div className="h-full">
-                    <img src="/home/equipements1.jpg" alt="Equipements" className="object-cover h-full" />
+                    <img src="/home/equipements1.jpg" alt="Equipements" className="object-cover h-full w-full" />
                 </div>
             </div>
         </section>

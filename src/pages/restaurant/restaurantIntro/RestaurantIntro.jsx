@@ -46,13 +46,13 @@ const RestaurantIntro = () => {
             <Slider {...settings} className="restaurantIntroSlider mt-20 lg:mt-28">
 
                 <div>
-                    <img src="/restaurant/restaurant1.jpeg" alt="restaurant slider" className="w-full h-auto lg:h-[530px] object-cover" />
+                    <img src="/restaurant/restaurant1.jpg" alt="restaurant slider" className="w-full h-auto lg:h-[530px] object-cover" />
                 </div>
                 <div>
-                    <img src="/restaurant/restaurant2.jpeg" alt="restaurant slider" className="w-full h-auto lg:h-[530px] object-cover" />
+                    <img src="/restaurant/restaurant2.jpg" alt="restaurant slider" className="w-full h-auto lg:h-[530px] object-cover" />
                 </div>
                 <div>
-                    <img src="/restaurant/restaurant3.jpeg" alt="restaurant slider" className="w-full h-auto lg:h-[530px] object-cover" />
+                    <img src="/restaurant/restaurant3.jpg" alt="restaurant slider" className="w-full h-auto lg:h-[530px] object-cover" />
                 </div>
 
             </Slider>

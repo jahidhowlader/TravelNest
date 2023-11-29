@@ -49,7 +49,7 @@ const SpaIntro = () => {
                     muted
                 >
                     <source
-                        src="https://nuss.uxper.co/boutique-hotel/wp-content/uploads/sites/2/2021/06/video-spa.mp4"
+                        src="/spa/video-spa.mp4"
                         type="video/mp4"
                     />
                 </video>

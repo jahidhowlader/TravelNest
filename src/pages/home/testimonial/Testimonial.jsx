@@ -15,7 +15,7 @@ const Testimonial = () => {
     };
 
     return (
-        <section className="bg-[#f6f6fa]">
+        <section className="bg-primary-color bg-opacity-5">
 
             <div className="grid sm:grid-cols-2 my-container">
 
@@ -26,7 +26,7 @@ const Testimonial = () => {
                     </span>
 
                     <div className="mt-10 dm:mt-20">
-                        <img src="/home/room9.jpeg" alt="room1" className="w-full object-cover" />
+                        <img src="/home/room9.jpeg" alt="room1" className="w-full h-auto object-cover" />
 
                         <span className="flex items-center gap-8 mt-5">
                             <span className="">Offer</span>

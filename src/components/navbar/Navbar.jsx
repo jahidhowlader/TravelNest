@@ -1,22 +1,30 @@
 import { Link } from "react-router-dom";
 import useAuth from "../../hook/useAuth";
 import { CiMobile2 } from "react-icons/ci";
+import Sidebar from "./sidebar/Sidebar";
 
 const Navbar = () => {
 
     const { user } = useAuth()
     console.log(user);
 
+
     // border-b shadow-sm border-primary-color
     return (
-        <nav className='bg-black text-white'>
+        <nav className='bg-black text-white relative'>
 
             <div className='flex items-center justify-between'>
                 {/* Logo */}
-                <Link to='/' className='ml-3 md:ml-20 flex flex-col items-center'>
-                    <h1 className='text-3xl font-semibold primary-font'>TravelNest</h1>
-                    <p className='text-xs tracking-widest -mt-2 md:mt-0'>Boutique Hotel</p>
-                </Link>
+                <div className='ml-3 sm:ml-9 flex items-center'>
+
+                    {/* SideBar Navigation */}
+                    <Sidebar />
+
+                    <Link className="ml-11 md:ml-14 flex flex-col sm:items-center">
+                        <h1 className='text-xl sm:text-3xl font-semibold primary-font'>TravelNest</h1>
+                        <p className='text-xs sm:tracking-widest ml-1.5 -mt-1 md:-mt-1 lg:mt-0'>Boutique Hotel</p>
+                    </Link>
+                </div>
 
 
                 <div className='flex items-center gap-6'>
@@ -26,8 +34,8 @@ const Navbar = () => {
                         <span> +880 1625 405959</span>
                     </div>
 
-                    <div className='bg-primary-color p-2 md:p-3 lg:p-6'>
-                        <p className='uppercase font-medium text-sm lg:text-base'>Book <br />Now</p>
+                    <div className='bg-primary-color p-3 lg:p-6'>
+                        <Link to="/rooms"> <p className='uppercase font-medium text-sm lg:text-base'>Book <br />Now</p></Link>
                     </div>
                 </div>
             </div>

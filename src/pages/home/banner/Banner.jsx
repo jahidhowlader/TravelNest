@@ -53,10 +53,10 @@ const Banner = () => {
                     className="absolute z-10"
                     variants={variantsContent} initial="initial" whileInView="animate"
                 >
-                    <h1 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl 2xl:text-7xl 3xl:text-8xl primary-font font-bold">Unique <span className="italic">Botique Hotel</span> <br />in chicago</h1>
-                    <p className="text-xs sm:text-base lg:text-lg my-5 xl:my-12 2xl:my-16 tracking-wide">From $64 per person and night</p>
+                    <h1 className="text-3xl lg:text-4xl xl:text-5xl 2xl:text-7xl 3xl:text-8xl primary-font font-bold">Unique <span className="italic">Botique Hotel</span> <br />in chicago</h1>
+                    <p className="text-sm sm:text-base lg:text-lg my-5 xl:my-12 2xl:my-16 tracking-wide">From $64 per person and night</p>
                     <Link to="/rooms">
-                        <button className="bg-primary-color px-3 py-1 sm:px-6 2xl:px-10 sm:py-2 2x:py-3 font-medium uppercase text-xs sm:text-sm xl:text-base rounded-sm">explorer rooms</button></Link>
+                        <button className="bg-primary-color px-3 py-2 sm:px-6 2xl:px-10 sm:py-2 2x:py-3 font-medium uppercase text-xs sm:text-sm xl:text-base rounded-sm">explorer rooms</button></Link>
                 </motion.div>
 
                 {/* Banner Content */}

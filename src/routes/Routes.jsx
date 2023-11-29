@@ -47,7 +47,7 @@ export const router = createBrowserRouter([
                 element: <About />
             },
             {
-                path: "/meeting_room",
+                path: "/service",
                 element: <MeetingRoom />
             },
             {

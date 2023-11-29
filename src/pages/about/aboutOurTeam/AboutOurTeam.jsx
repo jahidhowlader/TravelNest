@@ -8,19 +8,19 @@ const AboutOurTeam = () => {
 
                 <div className='grid grid-cols-2 sm:grid-cols-3 gap-8 my-20'>
                     <div>
-                        <img src="/about/staff-1.jpg" alt="staff" />
+                        <img src="/about/staff-1.jpg" alt="staff" className="h-auto w-auto"/>
 
                         <h5 className='text-2xl primary-font mt-5 font-bold'>Fuooeitima Cambeiro</h5>
                         <span className='opacity-70'>Managing Director</span>
                     </div>
                     <div>
-                        <img src="/about/staff-2.jpg" alt="staff" />
+                        <img src="/about/staff-2.jpg" alt="staff" className="h-auto w-auto"/>
 
                         <h5 className='text-2xl primary-font mt-5 font-bold'>Graham Griffiths</h5>
                         <span className='opacity-70'>Customes Success</span>
                     </div>
                     <div>
-                        <img src="/about/staff-3.jpg" alt="staff" />
+                        <img src="/about/staff-3.jpg" alt="staff" className="h-auto w-auto" />
 
                         <h5 className='text-2xl primary-font mt-5 font-bold'>Ishaaq El Vohra</h5>
                         <span className='opacity-70'>Head Chef</span>
@@ -29,21 +29,21 @@ const AboutOurTeam = () => {
             </section>
 
             <section className='mb-20'>
-                <div className='my-container flex flex-wrap justify-between items-center'>
+                <div className='my-container flex flex-wrap justify-between items-center gap-x-10 gap-y-3 sm:gap-0'>
                     <div>
-                        <img src="/about/support-logo-1.png" alt="logo" className='object-cover opacity-60 hover:opacity-100 w-full h-auto' />
+                        <img src="/about/support-logo-1.png" alt="logo" className='object-cover opacity-60 hover:opacity-100 w-28 sm:w-full h-auto' />
                     </div>
                     <div>
-                        <img src="/about/support-logo-2.png" alt="logo" className='object-cover opacity-60 hover:opacity-100 w-full h-auto' />
+                        <img src="/about/support-logo-2.png" alt="logo" className='object-cover opacity-60 hover:opacity-100 w-28 sm:w-full h-auto' />
                     </div>
                     <div>
-                        <img src="/about/support-logo-3.png" alt="logo" className='object-cover opacity-60 hover:opacity-100 w-full h-auto' />
+                        <img src="/about/support-logo-3.png" alt="logo" className='object-cover opacity-60 hover:opacity-100 w-28 sm:w-full h-auto' />
                     </div>
                     <div>
-                        <img src="/about/support-logo-4.png" alt="logo" className='object-cover opacity-60 hover:opacity-100 w-full h-auto' />
+                        <img src="/about/support-logo-4.png" alt="logo" className='object-cover opacity-60 hover:opacity-100 w-28 sm:w-full h-auto' />
                     </div>
                     <div>
-                        <img src="/about/support-logo-5.png" alt="logo" className='object-cover opacity-60 hover:opacity-100 w-full h-auto' />
+                        <img src="/about/support-logo-5.png" alt="logo" className='object-cover opacity-60 hover:opacity-100 w-28 sm:w-full h-auto' />
                     </div>
                 </div>
             </section>

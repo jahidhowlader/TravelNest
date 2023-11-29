@@ -3,7 +3,7 @@ const AboutIntro = () => {
         <section className='my-container my-20'>
 
             <div className='lg:w-7/12 mx-auto'>
-                <p className='text-2xl primary-font text-center font-semibold'>Our story is a simple one. We love NUSS. The owners were married here and generations of their family have lived and still live here.</p>
+                <p className='text-2xl primary-font text-center font-semibold'>Our story is a simple one. We love TravelNest. The owners were married here and generations of their family have lived and still live here.</p>
 
                 <div className='grid grid-cols-3 gap-5 sm:gap-0 items-center mt-10  text-center'>
                     <div>
@@ -25,13 +25,13 @@ const AboutIntro = () => {
                 <div className="order-2 lg:order-1">
                     <p className='text-2xl primary-font lg:mr-16 font-semibold'>" We believe in something better than whatu2019s currently out there. A place that celebrates life rather than sucks life out of it. A hotel thatu2019s built on creativity and a belief that you donu2019t have to accept the conventional."</p>
 
-                    <img src="/about/sig.png" alt="signeture" className='my-8' />
+                    <img src="/about/sig.png" alt="signeture" className='my-8 h-auto w-auto' />
 
                     <h6 className='font-medium'>Muler Kay</h6>
                     <span className='opacity-80'>General Manager</span>
                 </div>
                 <div className="order-1 lg:order-2">
-                    <img src="/about/about-1.jpg" alt="about" className="w-full max-h-[550px] object-cover " />
+                    <img src="/about/about-1.jpg" alt="about" className="w-full h-[350px] md:h-[450px] lg:h-[550px] object-cover " />
                 </div>
             </div>
         </section>

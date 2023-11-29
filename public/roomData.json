@@ -1,0 +1,56 @@
+[
+    {
+        "roomNumbers": 301,
+        "unavailableDates": [],
+        "title": "Deluxe Double Room",
+        "size": "38",
+        "type": "Single",
+        "adult_capacity": 2,
+        "children_capacity": 1,
+        "beds": 1,
+        "bathroom": 1,
+        "photos": [
+            "https://i.ibb.co/7JgM3br/rooms1.jpg",
+            "https://i.ibb.co/P9QLpNm/rooms11.jpg",
+            "https://i.ibb.co/CW7qtCB/rooms111.jpg",
+            "https://i.ibb.co/5LTp6HZ/rooms1111.jpg",
+            "https://i.ibb.co/tLLxHCt/rooms11111.jpg"
+        ],
+        "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using ‘Content here, content here’, making it look like readable English.",
+        "room_facilities": [
+            "Wi-Fi",
+            "TV",
+            "Air Conditioning"
+        ],
+        "price": 150,
+        "rating": null,
+        "featured": false
+    },
+    {
+        "roomNumbers": 302,
+        "unavailableDates": [],
+        "title": "Deluxe Double Room",
+        "size": "38",
+        "type": "Single",
+        "adult_capacity": 2,
+        "children_capacity": 1,
+        "beds": 1,
+        "bathroom": 1,
+        "photos": [
+            "https://i.ibb.co/7JgM3br/rooms1.jpg",
+            "https://i.ibb.co/P9QLpNm/rooms11.jpg",
+            "https://i.ibb.co/CW7qtCB/rooms111.jpg",
+            "https://i.ibb.co/5LTp6HZ/rooms1111.jpg",
+            "https://i.ibb.co/tLLxHCt/rooms11111.jpg"
+        ],
+        "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using ‘Content here, content here’, making it look like readable English.",
+        "room_facilities": [
+            "Wi-Fi",
+            "TV",
+            "Air Conditioning"
+        ],
+        "price": 150,
+        "rating": null,
+        "featured": false
+    }
+]

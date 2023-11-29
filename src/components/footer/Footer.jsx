@@ -10,10 +10,12 @@ const Footer = () => {
 
                     <div className="col-span-4">
                         {/* Logo */}
-                        <div className='flex flex-col justify-center mb-5 md:mb-8'>
-                            <h1 className='text-3xl font-semibold primary-font hover:text-primary-color'>TravelNest</h1>
-                            <p className='pl-2 text-xs tracking-widest -mt-2 md:mt-0'>Boutique Hotel</p>
-                        </div>
+                        <Link to="/">
+                            <div className='flex flex-col justify-center mb-5 md:mb-8'>
+                                <h1 className='text-3xl font-semibold primary-font hover:text-primary-color'>TravelNest</h1>
+                                <p className='pl-2 text-xs tracking-widest -mt-2 md:mt-0'>Boutique Hotel</p>
+                            </div>
+                        </Link>
 
                         <ul className="space-y-2 md:space-y-5 font-medium">
                             <li ><span>E.</span> jahidhowlader.info@gmail.com</li>
@@ -29,7 +31,7 @@ const Footer = () => {
                             <li className="hover:hover:text-primary-color"><Link to="/about">Accommodation</Link></li>
                             <li className="hover:hover:text-primary-color"><Link to="/restaurant">Dine & Drink</Link></li>
                             <li className="hover:hover:text-primary-color"><Link to="/spa">Spa & Leisure</Link></li>
-                            <li className="hover:hover:text-primary-color"><Link to="/meeting_room">Services</Link></li>
+                            <li className="hover:hover:text-primary-color"><Link to="/service">Services</Link></li>
                         </ul>
                     </div>
 

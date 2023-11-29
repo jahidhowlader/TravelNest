@@ -16,7 +16,7 @@ const RestaurantTestimonial = () => {
     };
 
     return (
-        <section className="bg-[#f6f6fa] lg:p-20 pt-20 pb-32">
+        <section className="bg-primary-color bg-opacity-5 lg:p-20 pt-20 pb-32">
             <div className="my-container">
                 <Slider {...settings} className="restaurantTestimonialSlider">
 

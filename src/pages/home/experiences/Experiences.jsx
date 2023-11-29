@@ -36,7 +36,7 @@ const Experiences = () => {
                     // onMouseLeave={handleMouseLeave}
                     >
                         <source
-                            src="https://nuss.uxper.co/beach-hotel/wp-content/uploads/sites/2/2021/06/bg-video-scuba-diving.mp4"
+                            src="/home/video1.mp4"
                             type="video/mp4"
                         />
                     </video>
@@ -65,7 +65,7 @@ const Experiences = () => {
                     // onMouseLeave={handleMouseLeave}
                     >
                         <source
-                            src="https://nuss.uxper.co/beach-hotel/wp-content/uploads/sites/2/2021/06/bg-video-water-sports.mp4"
+                            src="/home/video2.mp4"
                             type="video/mp4"
                         />
                     </video>
@@ -88,7 +88,7 @@ const Experiences = () => {
                         onMouseLeave={handleMouseLeave}
                     >
                         <source
-                            src="https://nuss.uxper.co/beach-hotel/wp-content/uploads/sites/2/2021/06/bg-video-yoga-1.mp4"
+                            src="/home/video3.mp4"
                             type="video/mp4"
                         />
                         Your browser does not support the video tag.

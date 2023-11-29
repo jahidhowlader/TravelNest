@@ -1,5 +1,6 @@
+import PropTypes from 'prop-types';
 
-const RestaurantItems = ({img, name, category}) => {
+const RestaurantItems = ({ img, name, category }) => {
     return (
         <div className="flex items-center gap-5">
             <div>
@@ -13,5 +14,11 @@ const RestaurantItems = ({img, name, category}) => {
         </div>
     );
 };
+
+RestaurantItems.propTypes = {
+    img: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    category: PropTypes.string.isRequired
+}
 
 export default RestaurantItems;

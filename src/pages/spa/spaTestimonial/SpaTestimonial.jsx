@@ -16,7 +16,7 @@ const SpaTestimonial = () => {
     };
 
     return (
-        <section className="bg-[#f6f6fa] pt-20 lg:p-20 pb-32">
+        <section className="bg-primary-color bg-opacity-5 pt-20 lg:p-20 pb-32">
             <div className="my-container">
                 <Slider {...settings} className="spaTestimonialSlider">
 
@@ -47,7 +47,7 @@ const SpaTestimonial = () => {
                             <p>San Diego, California</p>
                         </div>
                     </div>
-                    
+
                 </Slider>
 
             </div>

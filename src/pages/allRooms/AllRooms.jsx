@@ -1,76 +1,140 @@
-import Slider from 'react-slick';
 import './allRooms.css'
-import { BsBoxSeam } from 'react-icons/bs';
-import { IoBedOutline } from 'react-icons/io5';
-import { LiaBathSolid } from "react-icons/lia";
+import { useState } from 'react';
+import 'react-date-range/dist/styles.css';
+import 'react-date-range/dist/theme/default.css';
+import { DateRange } from 'react-date-range';
+import { format } from 'date-fns'
+import useFetchData from '../../hooks/useFetchData';
+import RoomCart from './roomCart/RoomCart';
+import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
+import { Helmet } from 'react-helmet-async';
 
 const AllRooms = () => {
 
-    const settings = {
-        dots: true,
-        infinite: false,
-        speed: 500,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        arrows: false,
+    // ALL STATE ARE HERE
+    const [openDate, setOpenDate] = useState(false)
+    const [openModal, setOpenModal] = useState(false);
+    const [date, setDate] = useState([
+        {
+            startDate: new Date(),
+            endDate: new Date(),
+            key: 'selection'
+        }
+    ]);
+
+    // Fetch rooms data Through custom hooks
+    const { data: rooms, loading } = useFetchData('/rooms')
+
+    const getDatesInRange = (startDate, endDate) => {
+        const start = new Date(startDate);
+        const end = new Date(endDate);
+
+        const date = new Date(start.getTime());
+
+        const dates = [];
+
+        while (date <= end) {
+            dates.push(new Date(date).getTime());
+            date.setDate(date.getDate() + 1);
+        }
+
+        return dates;
+    };
+
+    const alldates = getDatesInRange(date[0].startDate, date[0].endDate);
+
+    // Check Avaiable Room with User date
+    const isAvailable = (unavailableDates) => {
+
+        const isFound = unavailableDates.some(date => alldates.includes(new Date(date).getTime()))
+        return isFound // !isFound;
+    };
+
+    // Handle Resevervation
+    const handlerReservation = async (id) => {
+
+        try {
+
+            const res = await axios.put(`http://localhost:3000/api/rooms/availability/${id}`, {
+                dates: alldates
+            })
+
+            return res.data
+
+        } catch (err) {
+
+            console.log(err);
+        }
     }
 
-
     return (
-        <section className='my-container mt-20 mb-40'>
+        <>
+            {/* TITLE */}
+            <Helmet>
+                <title>Rooms | TravelNest</title>
+            </Helmet>
 
-            <div className='text-center'>
-                <h2 className='text-[42px] primary-font pb- font-bold'>Search Results</h2>
-                <span className='text-lg opacity-80 '>We have found <span className='font-semibold text-primary-color'>8</span> rooms that your needs.</span>
-            </div>
+            <section className='my-container mt-20 mb-40'>
 
-            <div className='my-16'></div>
-
-
-            <div className='space-y-8'>
-                <div className='border border-gray border-opacity-[0.15] grid lg:grid-cols-12 items-center'>
-                    {/* IMAGE */}
-
-                    <div className='lg:col-span-4  overflow-hidden'>
-                        <Slider {...settings} className='roomsSilder overflow-hidden'>
-                            <img src="/rooms/rooms1.jpeg" alt="room list" className='object-cover h-[200px] sm:h-[370px] lg:h-[300px] xl:h-[370px] w-full' />
-                            <img src="/rooms/rooms11.jpeg" alt="room list" className='object-cover h-[200px] sm:h-[370px] lg:h-[300px] xl:h-[370px] w-full' />
-                            <img src="/rooms/rooms111.jpeg" alt="room list" className='object-cover h-[200px] sm:h-[370px] lg:h-[300px] xl:h-[370px] w-full' />
-                            <img src="/rooms/rooms1111.jpeg" alt="room list" className='object-cover h-[200px] sm:h-[370px] lg:h-[300px] xl:h-[370px] w-full' />
-                            <img src="/rooms/rooms11111.jpeg" alt="room list" className='object-cover h-[200px] sm:h-[370px] lg:h-[300px] xl:h-[370px] w-full' />
-                        </Slider>
-                    </div>
-
-                    {/* CONTENT */}
-                    <div className='lg:col-span-5 pl-5 space-y-5 mt-5 lg:mt-0'>
-                        <h3 className='text-3xl md:text-4xl primary-font font-bold'>Family Suite</h3>
-                        <span className="flex flex-wrap items-center gap-5 gap-y-2 sm:gap-y-0 sm:gap-7 text-lg tracking-wide ">
-                            <span className='flex items-center gap-2'> <BsBoxSeam className="text-lg" /> 38m<sup>2</sup></span>
-                            <span className='flex items-center gap-2'> <IoBedOutline className="text-lg"/>2 beds</span>
-                            <span className='flex items-center gap-2'> <LiaBathSolid className="text-lg" />1 bathroom</span>
-                        </span>
-
-                        <p className='text-lg opacity-80'>It is a long established fact that a reader will be distracted by the readable...</p>
-
-                        <div className='flex flex-wrap items-center gap-6 mr-5 sm:mr-0'>
-                            <img src="https://nuss.uxper.co/boutique-hotel/wp-content/uploads/sites/2/2021/04/dresser-drawers-2.svg" alt="logo" className='w-4 sm:w-6 h-4 sm:h-6 object-cover' />
-                            <img src="https://nuss.uxper.co/boutique-hotel/wp-content/uploads/sites/2/2021/06/breakfast-cereal.svg" alt="logo" className='w-4 sm:w-6 h-4 sm:h-6 object-cover' />
-                            <img src="https://nuss.uxper.co/boutique-hotel/wp-content/uploads/sites/2/2021/04/modern-tv-flat.svg" alt="logo" className='w-4 sm:w-6 h-4 sm:h-6 object-cover' />
-                            <img src="https://nuss.uxper.co/boutique-hotel/wp-content/uploads/sites/2/2021/04/bathroom-hair-dryer.svg" alt="logo" className='w-4 sm:w-6 h-4 sm:h-6 object-cover' />
-                            <img src="https://nuss.uxper.co/boutique-hotel/wp-content/uploads/sites/2/2021/04/laundry-iron.svg" alt="logo" className='w-4 sm:w-6 h-4 sm:h-6 object-cover' />
-                            <img src="https://nuss.uxper.co/boutique-hotel/wp-content/uploads/sites/2/2021/04/tea-kettle-1.svg" alt="logo" className='w-4 sm:w-6 h-4 sm:h-6 object-cover' />
-                            <img src="https://nuss.uxper.co/boutique-hotel/wp-content/uploads/sites/2/2021/04/saving-safe-1.svg" alt="logo" className='w-4 sm:w-6 h-4 sm:h-6 object-cover' />
-                        </div>
-                    </div>
-
-                    {/* Confirmation */}
-                    <div className='lg:col-span-3 lg:border-l border-gray border-opacity-[0.15] h-full flex flex-col justify-center lg:items-center m-5 ml-5 mt-5 sm:mt-10 lg:mt-5 lg:m-0'>
-                        <h4 className='text-xl font-medium text-primary-color'>$173<span className='text-black opacity-70'> / NIGHT</span></h4>
-                        <button className='mt-5 px-8 py-2 text-white font-medium bg-primary-color rounded-sm'>BOOK NOW</button>
-                    </div>
+                <div className='text-center'>
+                    <h2 className='text-[42px] primary-font pb- font-bold'>Search Results</h2>
+                    <span className='text-lg opacity-80 '>We have found <span className='font-semibold text-primary-color'>8</span> rooms that your needs.</span>
                 </div>
-            </div>
-        </section>
+
+                <div className='my-12'>
+
+                    <div className='flex flex-col sm:flex-row justify-center sm:items-end gap-8'>
+
+                        <div className='border-b pr-16 relative'>
+                            <p className='opacity-50 text-sm pb-4 font-medium'>CHECK IN - CHECK OUT</p>
+                            <p onClick={() => setOpenDate(!openDate)} className='pb-5 font-medium'>{`${format(date[0].startDate, "dd/MM/yyyy")} - ${format(date[0].endDate, "dd/MM/yyyy")}`}</p>
+
+                            <div className='absolute z-10 top-24'>
+
+                                {
+                                    openDate &&
+                                    <DateRange
+                                        editableDateInputs={true}
+                                        onChange={item => setDate([item.selection])}
+                                        moveRangeOnFirstSelection={false}
+                                        ranges={date}
+                                        minDate={new Date()}
+                                    />
+                                }
+                            </div>
+                        </div>
+
+                        <div className='border-b pr-16'>
+                            <p className='opacity-50 text-sm pb-4 font-medium'>ROOMS / GUESTS</p>
+                            <p className='pb-5 font-medium'>2 Room , 1 Adult , 0 Children</p>
+                        </div>
+
+                        <button className='text-white px-12 py-2.5 rounded-sm bg-primary-color font-medium'>SEARCH</button>
+                    </div>
+
+
+                </div>
+
+
+                <div className='space-y-8'>
+                    {
+                        loading ? 'loading' : (
+
+                            rooms && rooms.map(room => <RoomCart
+                                key={room._id}
+                                room={room}
+                                setOpenModal={setOpenModal}
+                                handlerReservation={() => handlerReservation(room._id)}
+                                isAvailable={isAvailable}
+                            />)
+                        )
+                    }
+                </div>
+            </section>
+
+        </>
+
     );
 };
 

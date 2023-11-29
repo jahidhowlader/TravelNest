@@ -1,0 +1,7 @@
+.primary-font {
+    font-family: 'Cormorant Garamond', serif;
+  }
+
+.list-item {
+    @apply primary-font text-2xl ml-4 mt-1
+}

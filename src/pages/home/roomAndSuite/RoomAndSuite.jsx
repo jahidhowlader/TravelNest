@@ -53,7 +53,7 @@ const RoomAndSuite = () => {
 
             <Slider {...settings} className="roomSuiteSlider">
                 <div className="">
-                    <img src="/home/room1.jpg" alt="room1" />
+                    <img src="/home/room1.jpg" alt="room" className="h-auto w-auto" />
 
                     <h3 className="primary-font text-xl sm:text-2xl mt-5 mb-3 font-bold hover:text-primary-color">Deluxe Double Room</h3>
 
@@ -65,7 +65,7 @@ const RoomAndSuite = () => {
 
                 </div>
                 <div className="">
-                    <img src="/home/room2.jpg" alt="room1" />
+                    <img src="/home/room2.jpg" alt="room" className="h-auto w-auto" />
 
                     <h3 className="primary-font text-xl sm:text-2xl mt-5 mb-3 font-bold hover:text-primary-color">Deluxe Double Room</h3>
 
@@ -77,7 +77,7 @@ const RoomAndSuite = () => {
 
                 </div>
                 <div className="">
-                    <img src="/home/room3.jpg" alt="room1" />
+                    <img src="/home/room3.jpg" alt="room" className="h-auto w-auto" />
 
                     <h3 className="primary-font text-xl sm:text-2xl mt-5 mb-3 font-bold hover:text-primary-color">Deluxe Double Room</h3>
 
@@ -89,7 +89,7 @@ const RoomAndSuite = () => {
 
                 </div>
                 <div className="">
-                    <img src="/home/room4.jpg" alt="room1" />
+                    <img src="/home/room4.jpg" alt="room" className="h-auto w-auto" />
                     <h3 className="primary-font text-xl sm:text-2xl mt-5 mb-3 font-bold hover:text-primary-color">Deluxe Double Room</h3>
 
                     <div className="flex flex-wrap items-center gap-x-5 sm:gap-10">
@@ -101,7 +101,7 @@ const RoomAndSuite = () => {
 
                 </div>
                 <div className="">
-                    <img src="/home/room5.jpg" alt="room1" />
+                    <img src="/home/room5.jpg" alt="room" className="h-auto w-auto" />
 
                     <h3 className="primary-font text-xl sm:text-2xl mt-5 mb-3 font-bold hover:text-primary-color">Deluxe Double Room</h3>
 
@@ -113,7 +113,7 @@ const RoomAndSuite = () => {
 
                 </div>
                 <div className="">
-                    <img src="/home/room6.jpg" alt="room1" />
+                    <img src="/home/room6.jpg" alt="room" className="h-auto w-auto" />
 
                     <h3 className="primary-font text-xl sm:text-2xl mt-5 mb-3 font-bold hover:text-primary-color">Deluxe Double Room</h3>
 
@@ -125,7 +125,7 @@ const RoomAndSuite = () => {
 
                 </div>
                 <div className="">
-                    <img src="/home/room7.jpg" alt="room1" />
+                    <img src="/home/room7.jpg" alt="room" className="h-auto w-auto" />
 
                     <h3 className="primary-font text-xl sm:text-2xl mt-5 mb-3 font-bold hover:text-primary-color">Deluxe Double Room</h3>
 
@@ -137,7 +137,7 @@ const RoomAndSuite = () => {
 
                 </div>
                 <div className="">
-                    <img src="/home/room8.jpg" alt="room1" />
+                    <img src="/home/room8.jpg" alt="room" className="h-auto w-auto" />
                     <h3 className="primary-font text-xl sm:text-2xl mt-5 mb-3 font-bold hover:text-primary-color">Deluxe Double Room</h3>
 
                     <div className="flex flex-wrap items-center gap-x-5 sm:gap-10">

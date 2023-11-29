@@ -10,8 +10,6 @@ const SpaService = () => {
         accordion4: false
     })
 
-    console.log({ ...accordion });
-
     // handleAccordion
     const handleAccordionClick = (accordionKey) => {
         setAccordion((prevAccordion) => ({
@@ -27,7 +25,7 @@ const SpaService = () => {
 
             <div className="my-20 grid lg:grid-cols-2 items-center">
                 <div>
-                    <img src="/spa/massage.jpeg" alt="message" className="w-full lg:w-[540px] h-[510px] object-cover" />
+                    <img src="/spa/massage.jpg" alt="message" className="w-full lg:w-[540px] h-[510px] object-cover" />
                 </div>
 
                 <div className="space-y-5 lg:ml-16 mt-5 lg:mt-0">
@@ -61,7 +59,7 @@ const SpaService = () => {
 
             <div className="my-28 grid lg:grid-cols-2 items-center">
                 <div>
-                    <img src="/spa/yoga.jpeg" alt="message" className="w-full lg:w-[540px] h-[510px] object-cover" />
+                    <img src="/spa/yoga1.jpg" alt="message" className="w-full lg:w-[540px] h-[510px] object-cover" />
                 </div>
 
                 <div className="space-y-5 lg:ml-16 mt-5 lg:mt-0">

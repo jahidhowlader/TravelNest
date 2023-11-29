@@ -10,7 +10,7 @@ const MeetingRoomPackage = () => {
             <section className='grid lg:grid-cols-2 my-container items-center'>
 
                 <div>
-                    <img src="/meeting_room/meeting_room1.jpg" alt="meeting_room" className='w-full lg:w-[540px] h-[300px] sm:h-[400px] md:h-[510px] object-cover' />
+                    <img src="/meeting_room/meeting_room.jpg" alt="meeting_room" className='w-full lg:w-[540px] h-[300px] sm:h-[400px] md:h-[510px] object-cover' />
                 </div>
 
                 <div className='space-y-4 lg:mx-16 mt-5 lg:mt-0'>
@@ -68,11 +68,11 @@ const MeetingRoomPackage = () => {
                 </div>
 
                 <div className="order-1 lg:order-2">
-                    <img src="/meeting_room/meeting_room2.jpg" alt="meeting_room" className='w-full lg:w-[540px] h-[300px] sm:h-[400px] md:h-[510px] object-cover' />
+                    <img src="/meeting_room/meeting_room1.jpg" alt="meeting_room" className='w-full lg:w-[540px] h-[300px] sm:h-[400px] md:h-[510px] object-cover' />
                 </div>
             </section>
 
-            <section className='bg-[#f6f6fa] mt-20 py-20 lg:p-20'>
+            <section className='bg-primary-color bg-opacity-5 mt-20 py-20 lg:p-20'>
                 <div className="my-container lg:grid grid-cols-2 items-center">
                     <div>
                         <img src="/meeting_room/meeting_room3.jpg" alt="meeting_room" className='w-full lg:w-[540px] h-auto object-cover' />
