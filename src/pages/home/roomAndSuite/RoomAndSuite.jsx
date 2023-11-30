@@ -8,6 +8,7 @@ import { useState } from "react";
 import { BsBoxSeam } from "react-icons/bs";
 import { IoBedOutline } from "react-icons/io5";
 import { LiaBathSolid } from "react-icons/lia";
+import { Link } from "react-router-dom";
 
 // SETTING FOR SLICK SLIDER
 const settings = {
@@ -43,19 +44,8 @@ const settings = {
 
 const RoomAndSuite = () => {
 
-    const {data: rooms, loading} = useFetchData('/rooms')
+    const { data: rooms, loading } = useFetchData('/rooms')
 
-    // const [rooms, setRooms] = useState([])
-    // useEffect(() => {
-
-    //     fetch('/roomData.json')
-    //         .then(res => res.json())
-    //         .then(data => setRooms(data))
-    // }, [])
-
-    console.log(44, rooms);
-
-    // TODO: remaining DYNAMIC
     return (
         <section className="mb-20 overflow-hidden">
             <div className="my-container grid sm:grid-cols-3 items-center mb-16">
@@ -76,110 +66,21 @@ const RoomAndSuite = () => {
                     rooms && rooms.map(room => <div
                         key={room.roomNumbers}
                         className="">
-                        <img src={room.photos[0]} alt="room" className="h-[400px] w-full" />
+                        <img src={room.photos[0]} alt="room" className="h-full w-full object-cover" />
 
-                        <h3 className="primary-font text-xl sm:text-2xl mt-5 mb-3 font-bold hover:text-primary-color">{room.title}</h3>
+                        <Link to={`/room/${room._id}`}><h3 className="primary-font text-xl sm:text-2xl mt-5 mb-3 font-bold hover:text-primary-color">{room.title}</h3></Link>
 
-                        {/* <div className="flex flex-wrap items-center gap-x-5 sm:gap-10 "> */}
                         <span className="flex flex-wrap items-center gap-5 gap-y-2 sm:gap-y-0 sm:gap-7 text-lg tracking-wide ">
                             <span className='flex items-center gap-2'> <BsBoxSeam className="text-lg" />{room?.size}m<sup className="-ml-2">2</sup></span>
                             <span className='flex items-center gap-2'> <IoBedOutline className="text-lg" />{`${room?.beds < 2 ? `${room?.beds} bed` : `${room?.beds} beds`}`}</span>
                             <span className='flex items-center gap-2'> <LiaBathSolid className="text-lg" />{`${room?.bathroom < 2 ? `${room?.bathroom} bathroom` : `${room?.bathroom} bathrooms`}`}</span>
                         </span>
-                        {/* </div> */}
-
                     </div>)
                 }
-
-
-
-                {/* <div className="">
-                    <img src="/home/room2.jpg" alt="room" className="h-auto w-auto" />
-
-                    <h3 className="primary-font text-xl sm:text-2xl mt-5 mb-3 font-bold hover:text-primary-color">Deluxe Double Room</h3>
-
-                    <div className="flex flex-wrap items-center gap-x-5 sm:gap-10">
-                        <span>38m<sup>2</sup></span>
-                        <span>2 beds</span>
-                        <span>1 bathroom</span>
-                    </div>
-
-                </div>
-                <div className="">
-                    <img src="/home/room3.jpg" alt="room" className="h-auto w-auto" />
-
-                    <h3 className="primary-font text-xl sm:text-2xl mt-5 mb-3 font-bold hover:text-primary-color">Deluxe Double Room</h3>
-
-                    <div className="flex flex-wrap items-center gap-x-5 sm:gap-10">
-                        <span>38m<sup>2</sup></span>
-                        <span>2 beds</span>
-                        <span>1 bathroom</span>
-                    </div>
-
-                </div>
-                <div className="">
-                    <img src="/home/room4.jpg" alt="room" className="h-auto w-auto" />
-                    <h3 className="primary-font text-xl sm:text-2xl mt-5 mb-3 font-bold hover:text-primary-color">Deluxe Double Room</h3>
-
-                    <div className="flex flex-wrap items-center gap-x-5 sm:gap-10">
-                        <span>38m<sup>2</sup></span>
-                        <span>2 beds</span>
-                        <span>1 bathroom</span>
-                    </div>
-
-
-                </div>
-                <div className="">
-                    <img src="/home/room5.jpg" alt="room" className="h-auto w-auto" />
-
-                    <h3 className="primary-font text-xl sm:text-2xl mt-5 mb-3 font-bold hover:text-primary-color">Deluxe Double Room</h3>
-
-                    <div className="flex flex-wrap items-center gap-x-5 sm:gap-10">
-                        <span>38m<sup>2</sup></span>
-                        <span>2 beds</span>
-                        <span>1 bathroom</span>
-                    </div>
-
-                </div>
-                <div className="">
-                    <img src="/home/room6.jpg" alt="room" className="h-auto w-auto" />
-
-                    <h3 className="primary-font text-xl sm:text-2xl mt-5 mb-3 font-bold hover:text-primary-color">Deluxe Double Room</h3>
-
-                    <div className="flex flex-wrap items-center gap-x-5 sm:gap-10">
-                        <span>38m<sup>2</sup></span>
-                        <span>2 beds</span>
-                        <span>1 bathroom</span>
-                    </div>
-
-                </div>
-                <div className="">
-                    <img src="/home/room7.jpg" alt="room" className="h-auto w-auto" />
-
-                    <h3 className="primary-font text-xl sm:text-2xl mt-5 mb-3 font-bold hover:text-primary-color">Deluxe Double Room</h3>
-
-                    <div className="flex flex-wrap items-center gap-x-5 sm:gap-10">
-                        <span>38m<sup>2</sup></span>
-                        <span>2 beds</span>
-                        <span>1 bathroom</span>
-                    </div>
-
-                </div>
-                <div className="">
-                    <img src="/home/room8.jpg" alt="room" className="h-auto w-auto" />
-                    <h3 className="primary-font text-xl sm:text-2xl mt-5 mb-3 font-bold hover:text-primary-color">Deluxe Double Room</h3>
-
-                    <div className="flex flex-wrap items-center gap-x-5 sm:gap-10">
-                        <span>38m<sup>2</sup></span>
-                        <span>2 beds</span>
-                        <span>1 bathroom</span>
-                    </div>
-
-
-                </div> */}
             </Slider>
         </section>
     );
 };
 
 export default RoomAndSuite;
+

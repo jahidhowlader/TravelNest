@@ -34,21 +34,21 @@ const RoomDetails = () => {
                         {/* Banner */}
                         <div className='grid grid-cols-2 gap-2'>
                             <div>
-                                <img src={room?.photos[0] || 'https://i.ibb.co/7kn7Q9g/room2.jpg'} alt="room" className='object-cover h-full w-full rounded-xl rounded-r-none cursor-pointer' />
+                                <img src={room?.photos[0]} alt="room" className='object-cover h-full w-full rounded-xl rounded-r-none cursor-pointer' />
                             </div>
                             <div className='grid grid-cols-2 gap-2'>
 
                                 <div>
-                                    <img src={room?.photos[1] || 'https://i.ibb.co/7kn7Q9g/room2.jpg'} alt="room" className='object-cover h-full w-full' />
+                                    <img src={room?.photos[1] || '/rooms/tv.jpg'} alt="room" className='object-cover xl:h-[208px] xl:w-[280px] w-full' />
                                 </div>
                                 <div>
-                                    <img src={room?.photos[2] || 'https://i.ibb.co/7kn7Q9g/room2.jpg'} alt="room" className='object-cover h-full w-full rounded-tr-xl' />
+                                    <img src={room?.photos[2] || '/rooms/bathroom.jpg'} alt="room" className='object-cover xl:h-[208px] xl:w-[280px] rounded-tr-xl' />
                                 </div>
                                 <div>
-                                    <img src={room?.photos[3] || 'https://i.ibb.co/7kn7Q9g/room2.jpg'} alt="room" className='object- h-full w-full' />
+                                    <img src={room?.photos[3] || '/rooms/balcony.jpg'} alt="room" className='object-cover xl:h-[208px] xl:w-[280px] ' />
                                 </div>
                                 <div>
-                                    <img src={room?.photos[4] || 'https://i.ibb.co/7kn7Q9g/room2.jpg'} alt="room" className='object-cover h-full w-full rounded-ee-xl' />
+                                    <img src={room?.photos[4] || '/rooms/dressing.jpg'} alt="room" className='object-cover xl:h-[208px] xl:w-[280px] rounded-ee-xl' />
                                 </div>
                             </div>
                         </div>

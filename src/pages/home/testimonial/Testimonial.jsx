@@ -26,7 +26,7 @@ const Testimonial = () => {
                     </span>
 
                     <div className="mt-10 dm:mt-20">
-                        <img src="/home/room9.jpeg" alt="room1" className="w-full h-auto object-cover" />
+                        <img src="https://i.ibb.co/9GpHDrF/interior-design-bedroom-with-modern-decoration-181624-46706.jpg" alt="room1" className="w-full h-auto object-cover" />
 
                         <span className="flex items-center gap-8 mt-5">
                             <span className="">Offer</span>
