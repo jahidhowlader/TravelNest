@@ -2,7 +2,7 @@ import axios from "axios";
 import toast from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
 
-const BillingForm = ({ room, totalDays, additionalPrice, price, guests }) => {
+const BillingForm = ({ room, totalDays, additionalPrice, totalPrice, guests }) => {
 
     const navigate = useNavigate()
 
@@ -39,7 +39,8 @@ const BillingForm = ({ room, totalDays, additionalPrice, price, guests }) => {
                         airportPickup: additionalPrice.totalPickUp + '',
                         laundry: additionalPrice.totalLaundry + ''
                     },
-                    price,
+                    price: room?.price,
+                    totalPrice,
                     guests: {
                         adult: guests?.adult,
                         children: guests?.children

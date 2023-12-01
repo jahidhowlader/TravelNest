@@ -17,7 +17,7 @@ const Reservation = () => {
     const [laundry, setLaundry] = useState(false)
 
     // DISTRUCTURE VALUE FROM BOOKING ROOM SIDEBAR, WHICH ARE HOLD LOCATION STATE
-    const { date, options, totalDays, room } = location?.state || {}
+    const { date, options, totalDays, room, setDate } = location?.state || {}
 
     // ADD TOTAL ADDITIONAL COST
     const additionalPrice = {
@@ -114,7 +114,9 @@ const Reservation = () => {
                                                 totalDays={totalDays}
                                                 guests={options}
                                                 additionalPrice={additionalPrice}
-                                                price={totalPrice}
+                                                totalPrice={totalPrice}
+                                                date={date}
+                                                setDate={setDate}
                                             />
                                         </div>
 

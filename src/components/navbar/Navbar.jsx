@@ -34,9 +34,11 @@ const Navbar = () => {
                         <span> +880 1625 405959</span>
                     </div>
 
-                    <div className='bg-primary-color p-3 lg:p-6'>
-                        <Link to="/rooms"> <p className='uppercase font-medium text-sm lg:text-base'>Book <br />Now</p></Link>
-                    </div>
+                    <Link to="/rooms">
+                        <div className='bg-primary-color p-3 lg:p-6'>
+                            <p className='uppercase font-medium text-sm lg:text-base'>Book <br />Now</p>
+                        </div>
+                    </Link>
                 </div>
             </div>
         </nav>

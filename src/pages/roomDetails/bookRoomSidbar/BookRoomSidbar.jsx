@@ -19,6 +19,14 @@ const BookRoomSidbar = ({ room }) => {
             key: 'selection'
         }
     ]);
+
+    console.log('client', date[0].startDate.getTime());
+    // console.log('5', date[0].endDate.getDate());
+
+
+
+
+
     // FOR OPEN AND COUNT GUESTS
     const [openOptions, setOpenOptions] = useState(false);
     const [options, setOptions] = useState({
@@ -177,7 +185,17 @@ const BookRoomSidbar = ({ room }) => {
                 </div>
             </div>
 
-            <Link to={`/reservation/${room._id}`} state={{options: options, totalDays: totalDays, date: date, room: room}}>
+            <Link
+                to={`/reservation/${room._id}`}
+                state={
+                    {
+                        options: options,
+                        totalDays: totalDays,
+                        date: date,
+                        room: room
+                    }
+                }
+            >
                 <button className='w-full bg-primary-color py-2 text-white font-medium tracking-wide rounded-sm mt-5'>BOOK NOW</button>
             </Link>
         </aside>

@@ -25,7 +25,7 @@ const Equipements = () => {
                         <li className="flex items-center gap-5 text-lg tracking-wide"><GiTowel className="text-3xl md:text-4xl hover:text-primary-color" /> Weekly Housekeeping</li>
                     </ul>
                 </div>
-                <div>
+                <div className="mt-12 sm:mt-0">
                     <div className="flex flex-col gap-8">
                         <img src="/home/equipements4.jpg" alt="Equipements" className="object-cover max-h-[312px] w-full" />
                         <img src="/home/equipements3.jpg" alt="Equipements" className="object-cover max-h-[312px] w-full" />

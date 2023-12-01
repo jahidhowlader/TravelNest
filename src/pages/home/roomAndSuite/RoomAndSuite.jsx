@@ -9,6 +9,7 @@ import { BsBoxSeam } from "react-icons/bs";
 import { IoBedOutline } from "react-icons/io5";
 import { LiaBathSolid } from "react-icons/lia";
 import { Link } from "react-router-dom";
+import RoomSize from "../../../components/roomSize/RoomSize";
 
 // SETTING FOR SLICK SLIDER
 const settings = {
@@ -70,11 +71,8 @@ const RoomAndSuite = () => {
 
                         <Link to={`/room/${room._id}`}><h3 className="primary-font text-xl sm:text-2xl mt-5 mb-3 font-bold hover:text-primary-color">{room.title}</h3></Link>
 
-                        <span className="flex flex-wrap items-center gap-5 gap-y-2 sm:gap-y-0 sm:gap-7 text-lg tracking-wide ">
-                            <span className='flex items-center gap-2'> <BsBoxSeam className="text-lg" />{room?.size}m<sup className="-ml-2">2</sup></span>
-                            <span className='flex items-center gap-2'> <IoBedOutline className="text-lg" />{`${room?.beds < 2 ? `${room?.beds} bed` : `${room?.beds} beds`}`}</span>
-                            <span className='flex items-center gap-2'> <LiaBathSolid className="text-lg" />{`${room?.bathroom < 2 ? `${room?.bathroom} bathroom` : `${room?.bathroom} bathrooms`}`}</span>
-                        </span>
+                        {/* Room size use from component */}
+                        <RoomSize room={room}/>
                     </div>)
                 }
             </Slider>

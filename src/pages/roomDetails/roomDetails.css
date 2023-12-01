@@ -1,0 +1,12 @@
+#availability {
+    .rdrDayDisabled {
+        background-color: #f1deda;
+        /* opacity: .2; */
+        color: white;
+        border: .5px solid #b85c47;
+    }
+
+    .rdrDay{
+        margin: 2px;
+    }
+}

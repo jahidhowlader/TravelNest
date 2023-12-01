@@ -1,10 +1,7 @@
 import PropTypes from 'prop-types';
-import { BsBoxSeam } from "react-icons/bs";
-import { IoBedOutline } from "react-icons/io5";
-import { LiaBathSolid } from "react-icons/lia";
 import Slider from "react-slick";
-import RoomFeatureLogo from "../../../components/roomFeaturesLogo/RoomFeatureLogo";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
+import RoomSize from '../../../components/roomSize/RoomSize';
 
 const settings = {
     dots: true,
@@ -44,17 +41,14 @@ const RoomCart = ({ room, setOpenModal, handlerReservation, isAvailable }) => {
                 <Link to={`/room/${_id}`}>
                     <h3 className='text-3xl md:text-4xl primary-font font-bold hover:text-primary-color'>{title}</h3>
                 </Link>
-                <span className="flex flex-wrap items-center gap-5 gap-y-2 sm:gap-y-0 sm:gap-7 text-lg tracking-wide ">
-                    <span className='flex items-center gap-2'> <BsBoxSeam className="text-lg" />{size}m<sup className="-ml-2">2</sup></span>
-                    <span className='flex items-center gap-2'> <IoBedOutline className="text-lg" />{`${beds < 2 ? `${beds} bed` : `${beds} beds`}`}</span>
-                    <span className='flex items-center gap-2'> <LiaBathSolid className="text-lg" />{`${bathroom < 2 ? `${bathroom} bathroom` : `${bathroom} bathrooms`}`}</span>
-                </span>
+                {/* Use Room Size COMPONENT */}
+                <RoomSize room={room} />
 
                 <p className='text-lg opacity-80 mr-5'>{description.substring(0, 110)}...</p>
 
                 <div className='flex flex-wrap items-center gap-6 mr-5 sm:mr-0'>
 
-                    <RoomFeatureLogo />
+                    {/* RoomFeatureLogo */}
                 </div>
             </div>
 
@@ -65,8 +59,8 @@ const RoomCart = ({ room, setOpenModal, handlerReservation, isAvailable }) => {
                 <button
                     // onClick={handlerReservation} className='mt-5 px-8 py-2 text-white font-medium bg-primary-color rounded-sm'
                     onClick={() => isAvailable(unavailableDates)} className='mt-5 px-8 py-2 text-white font-medium bg-primary-color rounded-sm'
-                    // disabled={!isAvailable(unavailableDates)}
-                    
+                // disabled={!isAvailable(unavailableDates)}
+
                 >
                     {/* <Link to={`/room/${_id}`}> */}
                     BOOK NOW

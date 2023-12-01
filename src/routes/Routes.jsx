@@ -11,9 +11,14 @@ import Spa from "../pages/spa/Spa";
 import Restaurant from "../pages/restaurant/Restaurant";
 import Reservation from "../pages/reservation/Reservation";
 import BookingList from "../pages/bookingList/BookingList";
+import Error from "../pages/error/Error";
 
 export const router = createBrowserRouter([
 
+    {
+        path: '*',
+        element: <Error />
+    },
     // ROOT TOUTES
     {
         path: "/",
@@ -22,7 +27,7 @@ export const router = createBrowserRouter([
             // ERROR 404
             {
                 path: '*',
-                // element: <Error404 />
+                element: <Error />
             },
             {
                 path: '/',

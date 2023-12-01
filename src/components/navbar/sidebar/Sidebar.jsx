@@ -43,6 +43,8 @@ const Sidebar = () => {
 
     const [click, setClick] = useState(false)
 
+    const user = false
+
     // TODO: SCROLL OFF
     return (
         <div>
@@ -141,18 +143,35 @@ const Sidebar = () => {
                                     </NavLink>
                                 </li>
 
-                                {/*  Logout*/}
-                                <li className="flex">
-                                    <span>01</span>
-                                    <NavLink
-                                        to="/logout"
-                                        className={({ isActive, isPending }) =>
-                                            isPending ? "pending" : isActive ? "list-item font-bold" : "list-item font-medium"
-                                        }
-                                    >
-                                        Logout
-                                    </NavLink>
-                                </li>
+                                {/* LOGIN AND Logout*/}
+                                {
+                                    !user ? (
+                                        <li className="flex">
+                                            <span>07</span>
+                                            <NavLink
+                                                to="/auth/login"
+                                                className={({ isActive, isPending }) =>
+                                                    isPending ? "pending" : isActive ? "list-item font-bold" : "list-item font-medium"
+                                                }
+                                            >
+                                                Login
+                                            </NavLink>
+                                        </li>
+                                    ) : (
+                                        <li className="flex">
+                                            <span>07</span>
+                                            <NavLink
+                                                to="/logout"
+                                                className={({ isActive, isPending }) =>
+                                                    isPending ? "pending" : isActive ? "list-item font-bold" : "list-item font-medium"
+                                                }
+                                            >
+                                                Logout
+                                            </NavLink>
+                                        </li>
+                                    )
+                                }
+
                             </ul>
                         </motion.div>
                     </>

@@ -3,18 +3,19 @@
 }
 
 #cart th {
-    padding: 10px 20px;
+    padding: 10px 0;
 }
 
 #cart td {
-    padding: 10px 10px;
-    border-top: 1px solid #808080;
+    padding: 10px 0;
+    border-bottom: 1px solid #808080;
+    
 }
-
+/* 
 #cart tr:hover {
-    background-color: #cfdcde;
-}
+    background-color: #f1deda;
+} */
 
 #cardHead tr:first-child {
-    background-color: #0F5259;
+    background-color: #1A1A1A;
 }
