@@ -77,13 +77,12 @@ const BookRoomSidbar = ({ room }) => {
                 <p className='opacity-50 font-semibold text-sm pb-3 tracking-wider'>CHECK IN - CHECK OUT</p>
                 <p onClick={() => setOpenDate(!openDate)} className='pb-3 font-medium'>{`${format(date[0].startDate, "dd/MM/yyyy")} - ${format(date[0].endDate, "dd/MM/yyyy")}`}</p>
 
-                <div className='absolute z-10 top-20 right-0'>
+                <div className='absolute z-10 top-20 -right-7 lg:right-0'>
 
                     {
                         openDate &&
                         <DateRange
                             editableDateInputs={true}
-                            // months={2}
                             onChange={item => setDate([item.selection])}
                             moveRangeOnFirstSelection={false}
                             ranges={date}
@@ -136,7 +135,7 @@ const BookRoomSidbar = ({ room }) => {
                                             handleOption("adult", "i")
                                         }}
                                         className='text-xl disabled:cursor-not-allowed disabled:opacity-50'
-                                        disabled={options.adult === (room.beds * 2)}
+                                        disabled={options.adult === +room?.adult_capacity}
                                     ><FiPlus />
                                     </button>
                                 </div>
@@ -164,7 +163,7 @@ const BookRoomSidbar = ({ room }) => {
                                             handleOption("children", "i")
                                         }}
                                         className='text-xl disabled:cursor-not-allowed disabled:opacity-50'
-                                        disabled={options.children === +room.beds}
+                                        disabled={options.children === +room.children_capacity}
                                     >
                                         <FiPlus />
                                     </button>

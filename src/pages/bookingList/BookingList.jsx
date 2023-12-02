@@ -37,7 +37,7 @@ const BookingList = () => {
 
                     </>) : (
                         <>
-                            <div className={`w-full min-h-[500px]`}>
+                            <div className={`w-full min-h-[600px]`}>
 
                                 <h1 className="text-6xl primary-font font-bold text-center pb-20">
                                     Booking List

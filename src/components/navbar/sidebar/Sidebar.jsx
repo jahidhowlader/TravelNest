@@ -1,9 +1,10 @@
 import { useState } from "react";
 import { motion } from "framer-motion"
 import { HiBars3CenterLeft } from "react-icons/hi2";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import './sidebar.css'
 import { TfiClose } from "react-icons/tfi";
+import useAuth from "../../../hook/useAuth";
 
 const isMobile = window.innerWidth < 500;
 const isTablet = window.innerWidth > 499 && window.innerWidth < 1024
@@ -43,7 +44,19 @@ const Sidebar = () => {
 
     const [click, setClick] = useState(false)
 
-    const user = false
+    const { user, dispatch } = useAuth()
+
+    // HandlerLogout
+    const navigate = useNavigate()
+    const handlerLogout = () => {
+
+        try {
+            dispatch({ type: "LOGOUT" });
+            navigate('/')
+        } catch (err) {
+            console.log(err);
+        }
+    }
 
     // TODO: SCROLL OFF
     return (
@@ -161,9 +174,10 @@ const Sidebar = () => {
                                         <li className="flex">
                                             <span>07</span>
                                             <NavLink
-                                                to="/logout"
+                                                to="#"
+                                                onClick={handlerLogout}
                                                 className={({ isActive, isPending }) =>
-                                                    isPending ? "pending" : isActive ? "list-item font-bold" : "list-item font-medium"
+                                                    isPending ? "pending" : isActive ? "list-item " : "list-item font-medium"
                                                 }
                                             >
                                                 Logout

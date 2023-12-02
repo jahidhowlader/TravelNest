@@ -12,6 +12,7 @@ import Restaurant from "../pages/restaurant/Restaurant";
 import Reservation from "../pages/reservation/Reservation";
 import BookingList from "../pages/bookingList/BookingList";
 import Error from "../pages/error/Error";
+import PrivateRoute from "./PrivateRoute";
 
 export const router = createBrowserRouter([
 
@@ -67,11 +68,11 @@ export const router = createBrowserRouter([
             },
             {
                 path: "/reservation/:id",
-                element: <Reservation />
+                element: <PrivateRoute><Reservation /></PrivateRoute>
             },
             {
                 path: "/bookingList",
-                element: <BookingList />
+                element: <PrivateRoute> <BookingList /> </PrivateRoute>
             }
         ]
     },

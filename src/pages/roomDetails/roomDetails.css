@@ -1,4 +1,9 @@
 #availability {
+    overflow: hidden;
+}
+
+#availability {
+
     .rdrDayDisabled {
         background-color: #f1deda;
         /* opacity: .2; */
@@ -6,7 +11,57 @@
         border: .5px solid #b85c47;
     }
 
-    .rdrDay{
+    .rdrDay {
         margin: 2px;
+    }
+}
+
+@media (min-width: 300px) {
+
+    #availability {
+
+        .rdrMonth {
+            width: 100%;
+        }
+    }
+}
+
+@media (min-width: 640px) {
+
+    #availability {
+
+        .rdrMonth {
+            width: 280px;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+
+    #availability {
+
+        .rdrMonth {
+            width: 205px;
+        }
+    }
+}
+
+@media (min-width: 900px) {
+
+    #availability {
+
+        .rdrMonth {
+            width: 250px;
+        }
+    }
+}
+
+@media (min-width: 1145px) {
+
+    #availability {
+
+        .rdrMonth {
+            width: 332px;
+        }
     }
 }

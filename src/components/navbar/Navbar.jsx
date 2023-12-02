@@ -1,14 +1,8 @@
 import { Link } from "react-router-dom";
-import useAuth from "../../hook/useAuth";
 import { CiMobile2 } from "react-icons/ci";
 import Sidebar from "./sidebar/Sidebar";
 
 const Navbar = () => {
-
-    const { user } = useAuth()
-    console.log(user);
-
-
     // border-b shadow-sm border-primary-color
     return (
         <nav className='bg-black text-white relative'>

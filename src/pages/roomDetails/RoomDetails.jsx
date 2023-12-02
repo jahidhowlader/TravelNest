@@ -53,7 +53,6 @@ const RoomDetails = () => {
                 loading ? <Loader /> : room?._id && (
                 <section className='my-container mt-14 mb-24'>
 
-                        {/* TODO: REMAINING Dynamic */}
                         {/* Banner */}
                         <div className='grid sm:grid-cols-2 gap-2 overflow-hidden'>
                             <div>
@@ -77,13 +76,13 @@ const RoomDetails = () => {
                         </div>
 
                         {/* Details */}
-                        <div className='mt-16 grid xl:grid-cols-7 relative'>
+                        <div className='mt-16 grid md:grid-cols-7 relative'>
 
-                            <div className='col-span-5 space-y-12 mr-20'>
+                            <div className='md:col-span-5 space-y-12 md:mr-20'>
                                 <div className='space-y-3'>
                                     <h5 className='tracking-wider font-medium text-primary-color'>${room?.price} PER NIGHT</h5>
 
-                                    <h2 className='primary-font text-[42px] font-bold'>{room?.title}</h2>
+                                    <h2 className='primary-font text-3xl lg:text-[42px] font-bold'>{room?.title}</h2>
 
                                     {/* Use Room Size COMPONENT */}
                                     <RoomSize room={room} />
@@ -96,7 +95,7 @@ const RoomDetails = () => {
                                 <div>
                                     <h3 className='text-3xl primary-font font-bold'>Room Facilities</h3>
 
-                                    <div className='grid xl:grid-cols-2 w-9/12 gap-20 mt-5'>
+                                    <div className='grid sm:grid-cols-2 lg:w-9/12 gap-8 lg:gap-20 mt-5'>
 
                                         <div className='space-y-8'>
                                             <div className='flex items-center gap-5'>
@@ -155,7 +154,7 @@ const RoomDetails = () => {
                                 </div>
 
                                 {/* Availability DATES */}
-                                {/* <div>
+                                <div className=''>
                                     <h3 className='text-3xl primary-font font-bold mb-2'>Availability</h3>
                                     <div id='availability'>
 
@@ -168,7 +167,7 @@ const RoomDetails = () => {
                                             direction="horizontal"
                                         />
                                     </div>
-                                </div> */}
+                                </div>
 
 
 
@@ -176,7 +175,7 @@ const RoomDetails = () => {
                                 <div className='space-y-8'>
                                     <h3 className='text-3xl primary-font font-bold'>Additional Services</h3>
 
-                                    <div className='flex items-center gap-5'>
+                                    <div className='flex flex-col sm:flex-row sm:items-center gap-5'>
                                         <div>
                                             <img src="/airport.jpeg" alt="airport" className='h-[100px] w-[100px] object-cover' />
                                         </div>
@@ -188,7 +187,7 @@ const RoomDetails = () => {
                                         </div>
                                     </div>
 
-                                    <div className='flex items-center gap-5'>
+                                    <div className='flex flex-col sm:flex-row sm:items-center gap-5'>
                                         <div>
                                             <img src="/laundry.webp" alt="airport" className='h-[100px] w-[100px] object-cover' />
                                         </div>
@@ -214,7 +213,7 @@ const RoomDetails = () => {
                                 </div>
                             </div>
 
-                            <div className='col-span-2 ml-5'>
+                            <div className='col-span-2 lg:ml-5 mt-20'>
 
                                 <BookRoomSidbar room={room} />
                             </div>
