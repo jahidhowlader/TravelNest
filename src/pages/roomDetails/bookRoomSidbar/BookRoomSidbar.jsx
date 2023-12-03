@@ -8,7 +8,7 @@ import 'react-date-range/dist/styles.css';
 import 'react-date-range/dist/theme/default.css';
 import { Link } from 'react-router-dom'
 
-const BookRoomSidbar = ({ room }) => {
+const BookRoomSidbar = ({ room, disabledDates }) => {
 
     // FOR OPEN AND SELECT DATE
     const [openDate, setOpenDate] = useState(false)
@@ -20,12 +20,10 @@ const BookRoomSidbar = ({ room }) => {
         }
     ]);
 
-    console.log('client', date[0].startDate.getTime());
-    // console.log('5', date[0].endDate.getDate());
-
-
-
-
+    console.log(1, date[0].startDate.toLocaleTimeString());
+    // console.log(2, date[0].startDate.getTime());
+    // console.log(3, new Date());
+    // console.log(4, new Date().setHours(0, 0, 0, 0));
 
     // FOR OPEN AND COUNT GUESTS
     const [openOptions, setOpenOptions] = useState(false);
@@ -45,26 +43,22 @@ const BookRoomSidbar = ({ room }) => {
     };
 
     // COUNT ALL DAYS USER SELECTED FOR GET TOTAL PRICE ROOM SERVICES AND STORE DATA IN MONGODB
-    const countAllDateOnRange = (startDate, endDate) => {
-        const start = new Date(startDate);
-        const end = new Date(endDate);
+    const countAllDateOnRange = (startDateString, endDateString) => {
 
-        const date = new Date(start.getTime());
+        const startDate = new Date(startDateString);
+        const endDate = new Date(endDateString);
 
-        const dates = [];
+        const includedDays = [];
 
-        while (date <= end) {
-            dates.push(new Date(date).getTime());
-            date.setDate(date.getDate() + 1);
+        for (let currentDay = startDate; currentDay <= endDate; currentDay.setDate(currentDay.getDate() + 1)) {
+
+            includedDays.push(new Date(currentDay).getTime());
         }
 
-        return dates;
+        return includedDays
     };
     const totalDays = countAllDateOnRange(date[0].startDate, date[0].endDate);
-
-    // CHECK UNAVAIABLE DATE
-    const disabledDates = room?.unavailableDates && room?.unavailableDates.map((dateString) => parseISO(dateString));
-
+    console.log('front', totalDays);
 
     return (
         <aside className='sticky top-10 border border-gray border-opacity-[0.15] rounded-md bg-white shadow-sm p-7 space-y-5'>
@@ -89,7 +83,6 @@ const BookRoomSidbar = ({ room }) => {
                             minDate={new Date()}
                             disabledDates={disabledDates}
                             rangeColors={['#b85c47']}
-                        // direction="horizontal"
                         />
                     }
                 </div>
@@ -184,19 +177,23 @@ const BookRoomSidbar = ({ room }) => {
                 </div>
             </div>
 
-            <Link
-                to={`/reservation/${room._id}`}
-                state={
-                    {
-                        options: options,
-                        totalDays: totalDays,
-                        date: date,
-                        room: room
-                    }
-                }
-            >
-                <button className='w-full bg-primary-color py-2 text-white font-medium tracking-wide rounded-sm mt-5'>BOOK NOW</button>
-            </Link>
+            {
+                date[0].startDate.toLocaleTimeString() !== '12:00:00 AM' && date[0].endDate.toLocaleTimeString() !== '12:00:00 AM' ?
+                    <button className='w-full bg-primary-color py-2 text-white font-medium tracking-wide rounded-sm mt-5 cursor-not-allowed'>PLEASE SELECT CHECK OUT</button> :
+                    <Link
+                        to={`/reservation/${room._id}`}
+                        state={
+                            {
+                                options: options,
+                                totalDays: totalDays,
+                                date: date,
+                                room: room
+                            }
+                        }
+                    >
+                        <button className='w-full bg-primary-color py-2 text-white font-medium tracking-wide rounded-sm mt-5'>BOOK NOW</button>
+                    </Link>
+            }
         </aside>
     );
 };

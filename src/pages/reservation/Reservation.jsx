@@ -10,7 +10,6 @@ const Reservation = () => {
 
     // GET LOCATION PATH
     const location = useLocation()
-    console.log('real', location);
 
     // ALL STATE ARE HERE
     const [pickUp, setPickUp] = useState(false)
@@ -39,7 +38,7 @@ const Reservation = () => {
                             <h1 className="text-6xl primary-font font-bold">
                                 Booking Checkout
                             </h1>
-                            <h3 className="text-3xl primary-font font-semibold pt-5 pb-20">You want to try to cheat, but it is not possible!</h3>
+                            <h3 className="text-3xl primary-font font-semibold pt-5 pb-20">You had a mistake, Please go to your back space!</h3>
                         </div> : (
                             <>
                                 <div>

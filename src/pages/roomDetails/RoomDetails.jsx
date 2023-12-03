@@ -27,20 +27,9 @@ const RoomDetails = () => {
 
     // FETCH SINGLE DATA THROUG BACKEND
     const { data: room, loading } = useFetchData(`/room/${id}`)
-    console.log(room);
 
     // CHECK UNAVAIABLE DATE
     const disabledDates = room?.unavailableDates && room?.unavailableDates.map((dateString) => parseISO(dateString));
-
-    // console.log('1', room?.unavailableDates[0]);  // 2023-12-01T04:58:20.141Z
-    // console.log('2', parseISO(room?.unavailableDates[0])); // Fri Dec 01 2023 10:58:20 GMT+0600 (Bangladesh Standard Time)
-    // console.log('3', new Date()); // Fri Dec 01 2023 10:58:20 GMT+0600 (Bangladesh Standard Time)
-    // console.log('3', room?.unavailableDates[0]?.getTime()); 
-
-    const bookingDate = room?.unavailableDates?.length && room?.unavailableDates.map(date => parseISO(date).getTime())
-    
-    // console.log('TOday', new Date().getTime()); 
-    console.log('bookingDate', bookingDate); 
 
     return (
         <>
@@ -51,7 +40,7 @@ const RoomDetails = () => {
 
             {
                 loading ? <Loader /> : room?._id && (
-                <section className='my-container mt-14 mb-24'>
+                    <section className='my-container mt-14 mb-24'>
 
                         {/* Banner */}
                         <div className='grid sm:grid-cols-2 gap-2 overflow-hidden'>
@@ -215,7 +204,7 @@ const RoomDetails = () => {
 
                             <div className='col-span-2 lg:ml-5 mt-20'>
 
-                                <BookRoomSidbar room={room} />
+                                <BookRoomSidbar room={room} disabledDates={disabledDates} />
                             </div>
                         </div>
                     </section >

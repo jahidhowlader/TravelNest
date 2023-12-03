@@ -155,6 +155,19 @@ const Sidebar = () => {
                                         About Us
                                     </NavLink>
                                 </li>
+                                
+                                {/*  Booking List*/}
+                                <li className="flex">
+                                    <span>07</span>
+                                    <NavLink
+                                        to="/bookingList"
+                                        className={({ isActive, isPending }) =>
+                                            isPending ? "pending" : isActive ? "list-item font-bold" : "list-item font-medium"
+                                        }
+                                    >
+                                        Booking List
+                                    </NavLink>
+                                </li>
 
                                 {/* LOGIN AND Logout*/}
                                 {
@@ -172,7 +185,7 @@ const Sidebar = () => {
                                         </li>
                                     ) : (
                                         <li className="flex">
-                                            <span>07</span>
+                                            <span>08</span>
                                             <NavLink
                                                 to="#"
                                                 onClick={handlerLogout}

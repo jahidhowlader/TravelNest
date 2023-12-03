@@ -25,7 +25,7 @@ const OurServices = () => {
                     </div>
 
                     <div className="relative pb-20 md:pb-0">
-                        <Link to="/meeting_room">
+                        <Link to="/service">
                             <span className="absolute w-[1px] h-20 left-0 top-0 bg-primary-color"></span>
                             <h3 className="primary-font text-2xl lg:text-3xl xl:text-4xl font-semibold rotate-90 absolute -left-14 lg:-left-[78px] xl:-left-[92px] top-36 lg:top-40 xl:top-44">Work Station</h3>
                             <img src="/home/meeting.jpg" alt="meeting_room" className="pl-10 object-cover h-[350px] lg:h-[500px] w-full" />

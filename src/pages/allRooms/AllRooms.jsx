@@ -6,7 +6,6 @@ import { DateRange } from 'react-date-range';
 import { format } from 'date-fns'
 import useFetchData from '../../hooks/useFetchData';
 import RoomCart from './roomCart/RoomCart';
-import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { Helmet } from 'react-helmet-async';
 import { useEffect } from 'react';
@@ -16,7 +15,7 @@ const AllRooms = () => {
 
     // ALL STATE ARE HERE
     const [openDate, setOpenDate] = useState(false)
-    const [openModal, setOpenModal] = useState(false);
+    // const [openModal, setOpenModal] = useState(false);
     const [date, setDate] = useState([
         {
             startDate: new Date(),
@@ -39,9 +38,6 @@ const AllRooms = () => {
     useEffect(() => {
         setRooms(roomData); // Update rooms when roomData changes
     }, [roomData]);
-
-    console.log('room', rooms);
-    console.log('room', roomData);
 
 
     // Handle Resevervation
@@ -84,7 +80,12 @@ const AllRooms = () => {
 
                         <div className='border-b pr-16 relative'>
                             <p className='opacity-50 text-sm pb-4 font-medium'>CHECK IN - CHECK OUT</p>
-                            <p onClick={() => setOpenDate(!openDate)} className='pb-5 font-medium'>{`${format(date[0].startDate, "dd/MM/yyyy")} - ${format(date[0].endDate, "dd/MM/yyyy")}`}</p>
+                            <p
+                                onClick={() => {
+                                    setOpenDate(!openDate)
+                                    openDate && setOpenOptions(false)
+                                }}
+                                className='pb-5 font-medium'>{`${format(date[0].startDate, "dd/MM/yyyy")} - ${format(date[0].endDate, "dd/MM/yyyy")}`}</p>
 
                             <div className='absolute z-10 top-24'>
 
@@ -208,7 +209,7 @@ const AllRooms = () => {
                             rooms && rooms.map(room => <RoomCart
                                 key={room._id}
                                 room={room}
-                                setOpenModal={setOpenModal}
+                            // setOpenModal={setOpenModal}
                             />)
                         )
                     }

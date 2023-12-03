@@ -45,7 +45,7 @@ const settings = {
 
 const RoomAndSuite = () => {
 
-    const { data: rooms, loading } = useFetchData('/rooms')
+    const { data: rooms, loading } = useFetchData('/rooms?room=all')
 
     return (
         <section className="mb-20 overflow-hidden">

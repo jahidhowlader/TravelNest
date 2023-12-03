@@ -9,8 +9,6 @@ const PrivateRoute = ({children}) => {
     // TRACK ON LOCATION
     const location = useLocation()
 
-    console.log('private', user);
-
     if (loading){
         return <Loader />
     }

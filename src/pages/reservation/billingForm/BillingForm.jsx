@@ -1,10 +1,32 @@
 import axios from "axios";
+import { useState } from "react";
 import toast from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
+import useFetchData from "../../../hooks/useFetchData";
+import { useEffect } from "react";
 
 const BillingForm = ({ room, totalDays, additionalPrice, totalPrice, guests }) => {
 
     const navigate = useNavigate()
+
+
+    const updateRoomDetails = useFetchData(`/room/${room?._id}`)
+
+    // TEST
+    const [unavailableDates, setUnavailableDates] = useState([])
+    useEffect(() => {
+
+        setUnavailableDates(updateRoomDetails?.data?.unavailableDates)
+    }, [updateRoomDetails])
+
+    const checkUnavailableDates = unavailableDates && unavailableDates.map(date => new Date(date).getTime())
+    console.log('back', checkUnavailableDates);
+    console.log('front', totalDays);
+
+    const isAvailable = totalDays.some(date => checkUnavailableDates && checkUnavailableDates.includes(date))
+    console.log(isAvailable);
+
+    // TEST
 
     // handleReservation
     const handleReservation = async (e) => {
@@ -26,50 +48,59 @@ const BillingForm = ({ room, totalDays, additionalPrice, totalPrice, guests }) =
 
         try {
 
-            const updateRoomAvailability = await axios.put(`http://localhost:3000/api/room/availability/${room._id}`, {
-                dates: totalDays
-            })
+            if(isAvailable){
+                return toast.error('These dates are not allowed for booking!')
+            }
 
             try {
-                const createBooking = await axios.post(`http://localhost:3000/api/booking`, {
-                    roomNumbers: room?.roomNumbers,
-                    roomId: room?._id,
-                    title: room?.title,
-                    additionalPrice: {
-                        airportPickup: additionalPrice.totalPickUp + '',
-                        laundry: additionalPrice.totalLaundry + ''
-                    },
-                    price: room?.price,
-                    totalPrice,
-                    guests: {
-                        adult: guests?.adult,
-                        children: guests?.children
-                    },
-                    username: `${firstname} ${secondname}`,
-                    email,
-                    phone,
-                    address,
-                    city,
-                    country,
-                    zipcode,
-                    bookingDate: totalDays
+
+                const updateRoomAvailability = await axios.put(`http://localhost:3000/api/room/availability/${room._id}`, {
+                    dates: totalDays
                 })
 
-                form.reset()
+                try {
+                    const createBooking = await axios.post(`http://localhost:3000/api/booking`, {
+                        roomNumbers: room?.roomNumbers,
+                        roomId: room?._id,
+                        title: room?.title,
+                        additionalPrice: {
+                            airportPickup: additionalPrice.totalPickUp + '',
+                            laundry: additionalPrice.totalLaundry + ''
+                        },
+                        price: room?.price,
+                        totalPrice,
+                        guests: {
+                            adult: guests?.adult,
+                            children: guests?.children
+                        },
+                        username: `${firstname} ${secondname}`,
+                        email,
+                        phone,
+                        address,
+                        city,
+                        country,
+                        zipcode,
+                        bookingDate: totalDays
+                    })
 
-                // NAVIGATE BOOKING LIST PAGE
-                navigate('/bookingList')
+                    form.reset()
 
-                toast.success('Succefully Booking')
+                    // NAVIGATE BOOKING LIST PAGE
+                    navigate('/bookingList')
+
+                    toast.success('Succefully Booking')
+
+                } catch (err) {
+                    console.log(err);
+                    toast.error('Semothing Wrong')
+                }
 
             } catch (err) {
                 console.log(err);
                 toast.error('Semothing Wrong')
             }
-
         } catch (err) {
             console.log(err);
-            toast.error('Semothing Wrong')
         }
     }
 
