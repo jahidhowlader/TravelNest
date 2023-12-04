@@ -51,7 +51,7 @@ const RoomCart = ({ room }) => {
             {/* CONTENT */}
             <div className='lg:col-span-5 pl-5 space-y-5 mt-5 lg:mt-0 pr-5'>
                 <Link to={`/room/${_id}`}>
-                    <h3 className='text-3xl md:text-4xl primary-font font-bold hover:text-primary-color'>{title}</h3>
+                    <h3 className='text-2xl sm:text-3xl lg:text-3xl xl:text-[40px] primary-font font-bold hover:text-primary-color'>{title}</h3>
                 </Link>
                 {/* Use Room Size COMPONENT */}
                 <RoomSize room={room} />

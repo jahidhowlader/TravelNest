@@ -18,12 +18,12 @@ const BookingList = () => {
 
             {
                 loading ? <Loader /> : (
-                    <section className="my-[60px] my-container">
+                    <section className="my-20 my-container">
 
                         {
                             !bookingList?.length ? (<>
                                 <div className="flex flex-col justify-center items-center ">
-                                    <h1 className="text-6xl primary-font font-bold">
+                                    <h1 className="text-4xl md:text-5xl lg:text-6xl primary-font font-bold text-center mb-10 lg:mb-20">
                                         Booking List
                                     </h1>
                                     <h3 className="text-3xl primary-font font-semibold pt-5 pb-20">You have not add booking yet!</h3>
@@ -33,7 +33,7 @@ const BookingList = () => {
                                 <>
                                     <div className={`w-full min-h-[600px]`}>
 
-                                        <h1 className="text-6xl primary-font font-bold text-center pb-20">
+                                        <h1 className="text-4xl md:text-5xl lg:text-6xl primary-font font-bold text-center mb-10 lg:mb-20">
                                             Booking List
                                         </h1>
 

@@ -21,6 +21,16 @@
     #availability {
 
         .rdrMonth {
+            width: 140px;
+        }
+    }
+}
+
+@media (min-width: 340px) {
+
+    #availability {
+
+        .rdrMonth {
             width: 100%;
         }
     }

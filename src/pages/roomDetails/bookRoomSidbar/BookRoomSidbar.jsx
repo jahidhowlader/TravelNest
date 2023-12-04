@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types'
-import { format, parseISO } from 'date-fns';
+import { format } from 'date-fns';
 import { useState } from 'react';
 import { DateRange } from 'react-date-range';
 import { FiMinus, FiPlus } from 'react-icons/fi';
@@ -19,11 +19,6 @@ const BookRoomSidbar = ({ room, disabledDates }) => {
             key: 'selection'
         }
     ]);
-
-    console.log(1, date[0].startDate.toLocaleTimeString());
-    // console.log(2, date[0].startDate.getTime());
-    // console.log(3, new Date());
-    // console.log(4, new Date().setHours(0, 0, 0, 0));
 
     // FOR OPEN AND COUNT GUESTS
     const [openOptions, setOpenOptions] = useState(false);
@@ -58,17 +53,16 @@ const BookRoomSidbar = ({ room, disabledDates }) => {
         return includedDays
     };
     const totalDays = countAllDateOnRange(date[0].startDate, date[0].endDate);
-    console.log('front', totalDays);
 
     return (
         <aside className='sticky top-10 border border-gray border-opacity-[0.15] rounded-md bg-white shadow-sm p-7 space-y-5'>
 
-            <h3 className='text-3xl primary-font font-bold'>Book Your Room</h3>
+            <h3 className='text-2xl lg:text-3xl primary-font font-bold'>Book Your Room</h3>
 
 
             {/* DATE RANGE */}
             <div className='border-b relative z-20'>
-                <p className='opacity-50 font-semibold text-sm pb-3 tracking-wider'>CHECK IN - CHECK OUT</p>
+                <p className='opacity-50 font-semibold text-xs sm:text-sm pb-3 tracking-wider'>CHECK IN - CHECK OUT</p>
                 <p onClick={() => setOpenDate(!openDate)} className='pb-3 font-medium'>{`${format(date[0].startDate, "dd/MM/yyyy")} - ${format(date[0].endDate, "dd/MM/yyyy")}`}</p>
 
                 <div className='absolute z-10 top-20 -right-7 lg:right-0'>
@@ -90,13 +84,13 @@ const BookRoomSidbar = ({ room, disabledDates }) => {
 
             {/* ROOMS QUANTITY */}
             <div className='border-b relative'>
-                <p className='opacity-50 font-semibold text-sm tracking-wider pb-3'>ROOMS</p>
-                <p className='pb-3 font-medium'>{(+room?.beds) < 2 ? `${room?.beds} room` : `${room?.beds} rooms`}</p>
+                <p className='opacity-50 font-semibold text-xs sm:text-sm tracking-wider pb-3'>ROOMS</p>
+                <p className='pb-3 font-medium '>{(+room?.beds) < 2 ? `${room?.beds} room` : `${room?.beds} rooms`}</p>
             </div>
 
             {/* Number Of GUESTS */}
             <div onClick={() => setOpenOptions(!openOptions)} className='border-b relative'>
-                <p className='opacity-50 font-semibold text-sm tracking-wider pb-3'>NO OF GUESTS</p>
+                <p className='opacity-50 font-semibold text-xs sm:text-base tracking-wider pb-3'>NO OF GUESTS</p>
                 <div className='flex items-center justify-between pb-3 relative'>
                     <p className='font-medium'>{options.adult} Adult , {options.children} Children</p>
                     <HiChevronDown />
@@ -169,7 +163,7 @@ const BookRoomSidbar = ({ room, disabledDates }) => {
 
             {/* Total Price */}
             <div className='relative'>
-                <p className='opacity-50 font-semibold text-sm tracking-wider pb-3'>PRICE</p>
+                <p className='opacity-50 font-semibold text-xs sm:text-sm tracking-wider pb-3'>PRICE</p>
 
                 <div className='flex justify-between items-center'>
                     <h5 className='font-medium'>Total Price </h5>
@@ -179,7 +173,7 @@ const BookRoomSidbar = ({ room, disabledDates }) => {
 
             {
                 date[0].startDate.toLocaleTimeString() !== '12:00:00 AM' && date[0].endDate.toLocaleTimeString() !== '12:00:00 AM' ?
-                    <button className='w-full bg-primary-color py-2 text-white font-medium tracking-wide rounded-sm mt-5 cursor-not-allowed'>PLEASE SELECT CHECK OUT</button> :
+                    <button className='w-full bg-primary-color py-2 text-white font-medium tracking-wide sm:text-sm rounded-sm mt-5 cursor-not-allowed px-2'>PLEASE SELECT CHECK OUT</button> :
                     <Link
                         to={`/reservation/${room._id}`}
                         state={

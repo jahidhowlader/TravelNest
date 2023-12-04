@@ -71,7 +71,7 @@ const RoomDetails = () => {
                                 <div className='space-y-3'>
                                     <h5 className='tracking-wider font-medium text-primary-color'>${room?.price} PER NIGHT</h5>
 
-                                    <h2 className='primary-font text-3xl lg:text-[42px] font-bold'>{room?.title}</h2>
+                                    <h2 className='primary-font text-3xl lg:text-4xl font-bold'>{room?.title}</h2>
 
                                     {/* Use Room Size COMPONENT */}
                                     <RoomSize room={room} />
@@ -82,60 +82,60 @@ const RoomDetails = () => {
 
                                 {/* Room Facilities */}
                                 <div>
-                                    <h3 className='text-3xl primary-font font-bold'>Room Facilities</h3>
+                                    <h3 className='text-2xl lg:text-3xl primary-font font-bold'>Room Facilities</h3>
 
                                     <div className='grid sm:grid-cols-2 lg:w-9/12 gap-8 lg:gap-20 mt-5'>
 
                                         <div className='space-y-8'>
                                             <div className='flex items-center gap-5'>
-                                                <Balcony className={'w-8'} />
+                                                <Balcony className={'w-6 lg:w-8'} />
                                                 <span className='text-lg'>Balcony or Terrace</span>
                                             </div>
                                             <div className='flex items-center gap-5'>
-                                                <Tv className={'w-8'} />
+                                                <Tv className={'w-6 lg:w-8'} />
                                                 <span className='text-lg'>Flat Screen TV</span>
                                             </div>
                                             <div className='flex items-center gap-5'>
-                                                <Iron className={'w-8'} />
+                                                <Iron className={'w-6 lg:w-8'} />
                                                 <span className='text-lg'>Iron / Ironing Board</span>
                                             </div>
                                             <div className='flex items-center gap-5'>
-                                                <Locker className={'w-8'} />
+                                                <Locker className={'w-6 lg:w-8'} />
                                                 <span className='text-lg'>Saving Safe</span>
                                             </div>
                                             <div className='flex items-center gap-5'>
-                                                <Telephone className={'w-8'} />
+                                                <Telephone className={'w-6 lg:w-8'} />
                                                 <span className='text-lg'>Telephone</span>
                                             </div>
                                             <div className='flex items-center gap-5'>
-                                                <Wifi className={'w-8'} />
+                                                <Wifi className={'w-6 lg:w-8'} />
                                                 <span className='text-lg'>Wifi Access</span>
                                             </div>
                                         </div>
 
                                         <div className='space-y-8'>
                                             <div className='flex items-center gap-5'>
-                                                <Breakfast className={'w-8'} />
+                                                <Breakfast className={'w-6 lg:w-8'} />
                                                 <span className='text-lg'>Breakfast Included</span>
                                             </div>
                                             <div className='flex items-center gap-5'>
-                                                <Hairdryer className={'w-8'} />
+                                                <Hairdryer className={'w-6 lg:w-8'} />
                                                 <span className='text-lg'>Hairdryer</span>
                                             </div>
                                             <div className='flex items-center gap-5'>
-                                                <Kettle className={'w-8'} />
+                                                <Kettle className={'w-6 lg:w-8'} />
                                                 <span className='text-lg'>Kettle, Tea & Coffee</span>
                                             </div>
                                             <div className='flex items-center gap-5'>
-                                                <Shower className={'w-8'} />
+                                                <Shower className={'w-6 lg:w-8'} />
                                                 <span className='text-lg'>Shower bathtub</span>
                                             </div>
                                             <div className='flex items-center gap-5'>
-                                                <Towel className={'w-8'} />
+                                                <Towel className={'w-6 lg:w-8'} />
                                                 <span className='text-lg'>Towel Warmer</span>
                                             </div>
                                             <div className='flex items-center gap-5'>
-                                                <Desk className={'w-8'} />
+                                                <Desk className={'w-6 lg:w-8'} />
                                                 <span className='text-lg'>Writing Desk</span>
                                             </div>
                                         </div>
@@ -144,7 +144,7 @@ const RoomDetails = () => {
 
                                 {/* Availability DATES */}
                                 <div className=''>
-                                    <h3 className='text-3xl primary-font font-bold mb-2'>Availability</h3>
+                                    <h3 className='text-2xl lg:text-3xl primary-font font-bold mb-2'>Availability</h3>
                                     <div id='availability'>
 
 
@@ -162,7 +162,7 @@ const RoomDetails = () => {
 
                                 {/* Additional Services */}
                                 <div className='space-y-8'>
-                                    <h3 className='text-3xl primary-font font-bold'>Additional Services</h3>
+                                    <h3 className='text-2xl lg:text-3xl primary-font font-bold'>Additional Services</h3>
 
                                     <div className='flex flex-col sm:flex-row sm:items-center gap-5'>
                                         <div>
@@ -191,7 +191,7 @@ const RoomDetails = () => {
 
                                 {/* Room Rules */}
                                 <div>
-                                    <h3 className='text-3xl primary-font font-bold pb-8'>Room Rules</h3>
+                                    <h3 className='text-2xl lg:text-3xl primary-font font-bold pb-8'>Room Rules</h3>
                                     <ul className='text-lg tracking-wide opacity-80 space-y-1.5'>
                                         <li>- Checkin: After 2:00 PM</li>
                                         <li>- Check-out: 11:00 AM</li>
@@ -202,7 +202,7 @@ const RoomDetails = () => {
                                 </div>
                             </div>
 
-                            <div className='col-span-2 lg:ml-5 mt-20'>
+                            <div className='md:col-span-2 lg:ml-5 mt-20'>
 
                                 <BookRoomSidbar room={room} disabledDates={disabledDates} />
                             </div>

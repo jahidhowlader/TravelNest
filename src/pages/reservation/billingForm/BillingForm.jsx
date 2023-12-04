@@ -48,18 +48,18 @@ const BillingForm = ({ room, totalDays, additionalPrice, totalPrice, guests }) =
 
         try {
 
-            if(isAvailable){
+            if (isAvailable) {
                 return toast.error('These dates are not allowed for booking!')
             }
 
             try {
 
-                const updateRoomAvailability = await axios.put(`http://localhost:3000/api/room/availability/${room._id}`, {
+                const updateRoomAvailability = await axios.put(`https://travelnest-server-production.up.railway.app/api/room/availability/${room._id}`, {
                     dates: totalDays
                 })
 
                 try {
-                    const createBooking = await axios.post(`http://localhost:3000/api/booking`, {
+                    const createBooking = await axios.post(`https://travelnest-server-production.up.railway.app/api/booking`, {
                         roomNumbers: room?.roomNumbers,
                         roomId: room?._id,
                         title: room?.title,
@@ -106,9 +106,9 @@ const BillingForm = ({ room, totalDays, additionalPrice, totalPrice, guests }) =
 
     return (
         <form onSubmit={handleReservation} className="my-10">
-            <h3 className="text-3xl primary-font font-bold">Your Imformation</h3>
+            <h3 className="text-2xl lg:text-3xl primary-font font-bold">Your Imformation</h3>
 
-            <div className="grid grid-cols-2 gap-8 mt-8">
+            <div className="grid lg:grid-cols-2 gap-8 mt-8">
 
                 {/* First NAme */}
                 <div className="w-full">
@@ -205,7 +205,7 @@ const BillingForm = ({ room, totalDays, additionalPrice, totalPrice, guests }) =
                 </div>
             </div> */}
 
-            <button type="submit" className="px-8 py-2.5 bg-primary-color text-white uppercase rounded-sm font-medium mt-10" >Reservation</button>
+            <button type="submit" className="px-8 py-2 bg-primary-color text-white uppercase rounded-sm font-medium mt-10" >Reservation</button>
         </form>
     );
 };

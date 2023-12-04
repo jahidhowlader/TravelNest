@@ -13,6 +13,7 @@ import Reservation from "../pages/reservation/Reservation";
 import BookingList from "../pages/bookingList/BookingList";
 import Error from "../pages/error/Error";
 import PrivateRoute from "./PrivateRoute";
+import ScrollToTop from "../components/scrollToTop/ScrollToTop";
 
 export const router = createBrowserRouter([
 
@@ -44,35 +45,35 @@ export const router = createBrowserRouter([
             },
             {
                 path: "/rooms",
-                element: <AllRooms />
+                element: <ScrollToTop ><AllRooms /></ScrollToTop>
             },
             {
                 path: "/room/:id",
-                element: <RoomDetails />
+                element: <ScrollToTop > <RoomDetails /></ScrollToTop>
             },
             {
                 path: "/about",
-                element: <About />
+                element: <ScrollToTop><About /></ScrollToTop>
             },
             {
                 path: "/service",
-                element: <MeetingRoom />
+                element: <ScrollToTop><MeetingRoom /></ScrollToTop>
             },
             {
                 path: "/spa",
-                element: <Spa />
+                element: <ScrollToTop><Spa /></ScrollToTop>
             },
             {
                 path: "/restaurant",
-                element: <Restaurant />
+                element: <ScrollToTop><Restaurant /></ScrollToTop>
             },
             {
                 path: "/reservation/:id",
-                element: <PrivateRoute><Reservation /></PrivateRoute>
+                element: <ScrollToTop><PrivateRoute><Reservation /></PrivateRoute></ScrollToTop>
             },
             {
                 path: "/bookingList",
-                element: <PrivateRoute> <BookingList /> </PrivateRoute>
+                element: <ScrollToTop><PrivateRoute> <BookingList /> </PrivateRoute></ScrollToTop>
             }
         ]
     },

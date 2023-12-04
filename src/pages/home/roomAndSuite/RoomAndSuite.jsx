@@ -10,6 +10,7 @@ import { IoBedOutline } from "react-icons/io5";
 import { LiaBathSolid } from "react-icons/lia";
 import { Link } from "react-router-dom";
 import RoomSize from "../../../components/roomSize/RoomSize";
+import HomeRoomSkeleton from "../../../components/skeleton/homeRoomSkeleton/HomeRoomSkeleton";
 
 // SETTING FOR SLICK SLIDER
 const settings = {
@@ -61,21 +62,25 @@ const RoomAndSuite = () => {
                 <p className='tracking-wide'>Our hotel offers 30 double, and 5 single rooms as well as 36 suites and junior suites. View All Rooms</p>
             </div>
 
-            <Slider {...settings} className="roomSuiteSlider">
+            {
+                loading ? <HomeRoomSkeleton /> : (
+                    <Slider {...settings} className="roomSuiteSlider">
 
-                {
-                    rooms && rooms.map(room => <div
-                        key={room.roomNumbers}
-                        className="">
-                        <img src={room.photos[0]} alt="room" className="h-full w-full object-cover" />
+                        {
+                            rooms && rooms.map(room => <div
+                                key={room.roomNumbers}
+                                className="">
+                                <img src={room.photos[0]} alt="room" className="h-full w-full object-cover" />
 
-                        <Link to={`/room/${room._id}`}><h3 className="primary-font text-xl sm:text-2xl mt-5 mb-3 font-bold hover:text-primary-color">{room.title}</h3></Link>
+                                <Link to={`/room/${room._id}`}><h3 className="primary-font text-xl sm:text-2xl mt-5 mb-3 font-bold hover:text-primary-color">{room.title}</h3></Link>
 
-                        {/* Room size use from component */}
-                        <RoomSize room={room}/>
-                    </div>)
-                }
-            </Slider>
+                                {/* Room size use from component */}
+                                <RoomSize room={room} />
+                            </div>)
+                        }
+                    </Slider>
+                )
+            }
         </section>
     );
 };

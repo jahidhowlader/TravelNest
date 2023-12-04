@@ -10,6 +10,7 @@ import axios from 'axios';
 import { Helmet } from 'react-helmet-async';
 import { useEffect } from 'react';
 import { FiMinus, FiPlus } from 'react-icons/fi';
+import RoomCartSkeleton from '../../components/skeleton/roomCartSkeleton/RoomCartSkeleton';
 
 const AllRooms = () => {
 
@@ -45,7 +46,7 @@ const AllRooms = () => {
 
         setOpenOptions(false)
 
-        const searchResult = await axios(`http://localhost:3000/api/rooms?room=${options.room}&adult=${options.adult}&children=${options.children}`)
+        const searchResult = await axios(`https://travelnest-server-production.up.railway.app/api/rooms?room=${options.room}&adult=${options.adult}&children=${options.children}`)
         setRooms(searchResult.data)
     }
 
@@ -70,13 +71,13 @@ const AllRooms = () => {
             <section className='my-container mt-20 mb-40'>
 
                 <div className='text-center'>
-                    <h2 className='text-[42px] primary-font pb- font-bold'>Search Results</h2>
+                    <h2 className='text-3xl lg:text-5xl primary-font pb- font-bold'>Search Results</h2>
                     <span className='text-lg opacity-80 '>We have found <span className='font-semibold text-primary-color'>{rooms.length}</span> rooms that your needs.</span>
                 </div>
 
                 <div className='my-12'>
 
-                    <div className='flex flex-col sm:flex-row justify-center sm:items-end gap-8'>
+                    <div className='flex flex-col md:flex-row justify-center md:items-end gap-8'>
 
                         <div className='border-b pr-16 relative'>
                             <p className='opacity-50 text-sm pb-4 font-medium'>CHECK IN - CHECK OUT</p>
@@ -204,7 +205,7 @@ const AllRooms = () => {
 
                 <div className='space-y-8'>
                     {
-                        loading ? 'loading' : (
+                        loading ? <RoomCartSkeleton /> : (
 
                             rooms && rooms.map(room => <RoomCart
                                 key={room._id}

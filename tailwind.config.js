@@ -19,7 +19,6 @@ export default {
       'primary-color': '#b85c47',
       'black': '#1A1A1A',
       'white': '#fff',
-      'light-green': '#3B8900',
       'gray': '#808080',
       'error': '#F23030'
     },

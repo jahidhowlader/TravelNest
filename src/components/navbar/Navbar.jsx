@@ -14,7 +14,7 @@ const Navbar = () => {
                     {/* SideBar Navigation */}
                     <Sidebar />
 
-                    <Link className="ml-11 md:ml-14 flex flex-col sm:items-center">
+                    <Link to={'/'} className="ml-11 md:ml-14 flex flex-col sm:items-center">
                         <h1 className='text-xl sm:text-3xl font-semibold primary-font'>TravelNest</h1>
                         <p className='text-xs sm:tracking-widest ml-1.5 -mt-1 md:-mt-1 lg:mt-0'>Boutique Hotel</p>
                     </Link>
