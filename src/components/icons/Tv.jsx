@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types'
+
 const Tv = ({className}) => {
     return (
         <svg xmlns="http://www.w3.org/2000/svg" className={className} viewBox="0 0 32 32">
@@ -15,5 +17,9 @@ const Tv = ({className}) => {
         </svg>
     );
 };
+
+Tv.propTypes = {
+    className: PropTypes.string.isRequired,
+}
 
 export default Tv;

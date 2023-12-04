@@ -16,7 +16,6 @@ const AllRooms = () => {
 
     // ALL STATE ARE HERE
     const [openDate, setOpenDate] = useState(false)
-    // const [openModal, setOpenModal] = useState(false);
     const [date, setDate] = useState([
         {
             startDate: new Date(),
@@ -210,7 +209,6 @@ const AllRooms = () => {
                             rooms && rooms.map(room => <RoomCart
                                 key={room._id}
                                 room={room}
-                            // setOpenModal={setOpenModal}
                             />)
                         )
                     }

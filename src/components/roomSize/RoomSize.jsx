@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types'
+
 import { BsBoxSeam } from 'react-icons/bs';
 import { IoBedOutline } from 'react-icons/io5';
 import { LiaBathSolid } from 'react-icons/lia';
@@ -11,5 +13,9 @@ const RoomSize = ({room}) => {
         </span>
     );
 };
+
+RoomSize.propTypes = {
+    room: PropTypes.object.isRequired,
+}
 
 export default RoomSize;

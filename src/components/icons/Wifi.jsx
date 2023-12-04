@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types'
+
 const Wifi = ({ className }) => {
     return (
 
@@ -19,5 +21,9 @@ const Wifi = ({ className }) => {
 
     );
 };
+
+Wifi.propTypes = {
+    className: PropTypes.string.isRequired,
+}
 
 export default Wifi;

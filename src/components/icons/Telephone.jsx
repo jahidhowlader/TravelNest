@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types'
+
 const Telephone = ({ className }) => {
     return (
 
@@ -27,5 +29,9 @@ const Telephone = ({ className }) => {
 
     );
 };
+
+Telephone.propTypes = {
+    className: PropTypes.string.isRequired,
+}
 
 export default Telephone;

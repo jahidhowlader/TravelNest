@@ -65,7 +65,7 @@ const BookRoomSidbar = ({ room, disabledDates }) => {
                 <p className='opacity-50 font-semibold text-xs sm:text-sm pb-3 tracking-wider'>CHECK IN - CHECK OUT</p>
                 <p onClick={() => setOpenDate(!openDate)} className='pb-3 font-medium'>{`${format(date[0].startDate, "dd/MM/yyyy")} - ${format(date[0].endDate, "dd/MM/yyyy")}`}</p>
 
-                <div className='absolute z-10 top-20 -right-7 lg:right-0'>
+                <div id='checkIn' className={`absolute z-10 top-20 -right-7 lg:right-0 ${openDate ? 'border border-gray border-opacity-30' : ''}`}>
 
                     {
                         openDate &&
@@ -193,7 +193,8 @@ const BookRoomSidbar = ({ room, disabledDates }) => {
 };
 
 BookRoomSidbar.propTypes = {
-    room: PropTypes.array.isRequired
+    room: PropTypes.object.isRequired,
+    disabledDates: PropTypes.array.isRequired
 }
 
 export default BookRoomSidbar;

@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types'
 
 const Towel = ({className}) => {
     return (
@@ -19,5 +20,9 @@ const Towel = ({className}) => {
 
     );
 };
+
+Towel.propTypes = {
+    className: PropTypes.string.isRequired,
+}
 
 export default Towel;

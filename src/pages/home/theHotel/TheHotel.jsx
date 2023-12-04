@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { HiBars3CenterLeft, HiOutlinePlay } from "react-icons/hi2";
+import {  HiOutlinePlay } from "react-icons/hi2";
 import { useState } from "react";
 import ReactPlayer from "react-player";
 import { TfiClose } from "react-icons/tfi";
@@ -9,7 +9,6 @@ const xs = window.innerWidth < 640
 const sm = window.innerWidth < 768
 const md = window.innerWidth < 1024
 const lg = window.innerWidth < 1280
-const xl = window.innerWidth < 1520
 
 const TheHotel = () => {
 

@@ -1,14 +1,16 @@
+import PropTypes from 'prop-types'
 import axios from "axios";
 import { useState } from "react";
 import toast from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
 import useFetchData from "../../../hooks/useFetchData";
 import { useEffect } from "react";
+import useAuth from "../../../hooks/useAuth";
 
 const BillingForm = ({ room, totalDays, additionalPrice, totalPrice, guests }) => {
 
     const navigate = useNavigate()
-
+    const { user } = useAuth()
 
     const updateRoomDetails = useFetchData(`/room/${room?._id}`)
 
@@ -20,13 +22,8 @@ const BillingForm = ({ room, totalDays, additionalPrice, totalPrice, guests }) =
     }, [updateRoomDetails])
 
     const checkUnavailableDates = unavailableDates && unavailableDates.map(date => new Date(date).getTime())
-    console.log('back', checkUnavailableDates);
-    console.log('front', totalDays);
 
-    const isAvailable = totalDays.some(date => checkUnavailableDates && checkUnavailableDates.includes(date))
-    console.log(isAvailable);
-
-    // TEST
+    const isUnavailable = totalDays.some(date => checkUnavailableDates && checkUnavailableDates.includes(date))
 
     // handleReservation
     const handleReservation = async (e) => {
@@ -48,18 +45,18 @@ const BillingForm = ({ room, totalDays, additionalPrice, totalPrice, guests }) =
 
         try {
 
-            if (isAvailable) {
+            if (isUnavailable) {
                 return toast.error('These dates are not allowed for booking!')
             }
 
             try {
 
-                const updateRoomAvailability = await axios.put(`https://travelnest-server-production.up.railway.app/api/room/availability/${room._id}`, {
+                await axios.put(`https://travelnest-server-production.up.railway.app/api/room/availability/${room._id}`, {
                     dates: totalDays
-                })
+                }) //updateRoomAvailability
 
                 try {
-                    const createBooking = await axios.post(`https://travelnest-server-production.up.railway.app/api/booking`, {
+                    await axios.post(`https://travelnest-server-production.up.railway.app/api/booking`, {
                         roomNumbers: room?.roomNumbers,
                         roomId: room?._id,
                         title: room?.title,
@@ -81,7 +78,7 @@ const BillingForm = ({ room, totalDays, additionalPrice, totalPrice, guests }) =
                         country,
                         zipcode,
                         bookingDate: totalDays
-                    })
+                    }) // createBooking
 
                     form.reset()
 
@@ -138,8 +135,9 @@ const BillingForm = ({ room, totalDays, additionalPrice, totalPrice, guests }) =
                         type="email"
                         name="email"
                         placeholder="Email *"
+                        defaultValue={user?.email}
                         className="w-full py-3 border-b bg-[#f6f6fa] focus:border-primary-color outline-none px-2"
-                        required
+                        disabled
                     />
                 </div>
 
@@ -209,5 +207,13 @@ const BillingForm = ({ room, totalDays, additionalPrice, totalPrice, guests }) =
         </form>
     );
 };
+
+BillingForm.propTypes = {
+    room: PropTypes.object.isRequired,
+    totalDays: PropTypes.array.isRequired,
+    additionalPrice: PropTypes.object.isRequired,
+    totalPrice: PropTypes.number.isRequired,
+    guests: PropTypes.object.isRequired
+}
 
 export default BillingForm;

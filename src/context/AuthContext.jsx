@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types'
 import { createContext, useEffect, useReducer } from "react";
 
 const INITIAL_STATE = {
@@ -59,3 +60,7 @@ export const AuthContextProvider = ({ children }) => {
     </AuthContext.Provider>
   );
 };
+
+AuthContextProvider.propTypes = {
+  children: PropTypes.node.isRequired
+}

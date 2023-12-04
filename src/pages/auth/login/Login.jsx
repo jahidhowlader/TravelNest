@@ -6,7 +6,7 @@ import { Helmet } from "react-helmet-async";
 import { useForm } from "react-hook-form";
 import { motion } from "framer-motion"
 import { HiEye, HiEyeSlash } from 'react-icons/hi2';
-import useAuth from "../../../hook/useAuth";
+import useAuth from "../../../hooks/useAuth";
 
 const Login = () => {
 

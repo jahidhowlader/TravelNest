@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types'
+
 const Breakfast = ({className}) => {
     return (
         <svg className={className} viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
@@ -20,5 +22,9 @@ const Breakfast = ({className}) => {
         </svg>
     );
 };
+
+Breakfast.propTypes = {
+    className: PropTypes.string.isRequired,
+}
 
 export default Breakfast;

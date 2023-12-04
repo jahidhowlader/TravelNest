@@ -1,5 +1,3 @@
-// import 
-
 import { Link } from "react-router-dom";
 
 const OurServices = () => {

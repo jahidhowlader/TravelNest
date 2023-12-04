@@ -4,7 +4,7 @@ import { HiBars3CenterLeft } from "react-icons/hi2";
 import { NavLink, useNavigate } from "react-router-dom";
 import './sidebar.css'
 import { TfiClose } from "react-icons/tfi";
-import useAuth from "../../../hook/useAuth";
+import useAuth from "../../../hooks/useAuth";
 
 const isMobile = window.innerWidth < 500;
 const isTablet = window.innerWidth > 499 && window.innerWidth < 1024

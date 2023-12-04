@@ -9,11 +9,6 @@ import Hairdryer from '../../../components/icons/Hairdryer';
 import Iron from '../../../components/icons/Iron';
 import Kettle from '../../../components/icons/Kettle';
 import Locker from '../../../components/icons/Locker';
-import Shower from '../../../components/icons/Shower';
-import Telephone from '../../../components/icons/Telephone';
-import Towel from '../../../components/icons/Towel';
-import Wifi from '../../../components/icons/Wifi';
-import Desk from '../../../components/icons/Desk';
 
 const settings = {
     dots: true,
@@ -26,7 +21,7 @@ const settings = {
 
 const RoomCart = ({ room }) => {
 
-    const { _id, title, size, beds, bathroom, photos, description, price, unavailableDates } = room
+    const { _id, title, photos, description, price } = room
 
 
 

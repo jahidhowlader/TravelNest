@@ -3,11 +3,6 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import './roomAndSuite.css'
 import useFetchData from "../../../hooks/useFetchData";
-import { useEffect } from "react";
-import { useState } from "react";
-import { BsBoxSeam } from "react-icons/bs";
-import { IoBedOutline } from "react-icons/io5";
-import { LiaBathSolid } from "react-icons/lia";
 import { Link } from "react-router-dom";
 import RoomSize from "../../../components/roomSize/RoomSize";
 import HomeRoomSkeleton from "../../../components/skeleton/homeRoomSkeleton/HomeRoomSkeleton";

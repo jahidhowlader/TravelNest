@@ -4,8 +4,8 @@ import { HiEye, HiEyeSlash } from 'react-icons/hi2';
 import { useState } from 'react';
 import toast from 'react-hot-toast';
 import { Helmet } from 'react-helmet-async';
-import useAuth from '../../../hook/useAuth';
 import axios from 'axios';
+import useAuth from '../../../hooks/useAuth';
 
 
 const Signup = () => {

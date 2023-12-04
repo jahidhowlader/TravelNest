@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types'
+
 const Desk = ({ className }) => {
     return (
         <svg xmlns="http://www.w3.org/2000/svg" className={className} viewBox="0 0 32 32">
@@ -17,5 +19,9 @@ const Desk = ({ className }) => {
         </svg>
     );
 };
+
+Desk.propTypes = {
+    className: PropTypes.string.isRequired,
+}
 
 export default Desk;

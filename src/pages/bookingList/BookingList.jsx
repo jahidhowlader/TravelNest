@@ -1,13 +1,16 @@
 import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import useFetchData from '../../hooks/useFetchData';
 import './bookingList.css'
 import { BsFiletypePdf } from "react-icons/bs";
 import Loader from '../../components/loader/Loader';
+import useAuth from '../../hooks/useAuth';
 
 const BookingList = () => {
 
-    const { data: bookingList, loading } = useFetchData('/booking/jahidhowlader.info@gmail.com')
+    const { user } = useAuth()
+
+    const { data: bookingList, loading } = useFetchData(`/booking/${user?.email}`)
 
     return (
         <>
@@ -73,7 +76,7 @@ const BookingList = () => {
                                                             <td className='text-xs'>{list.roomNumbers}</td>
                                                             <td className='text-xs'>{new Date(list.bookingDate[0]).toLocaleDateString('en-GB')} <br /> to <br />{new Date(list.bookingDate[list.bookingDate.length - 1]).toLocaleDateString('en-GB')}</td>
                                                             <td className='text-xs'>{(+list.guests?.adult) + (+list.guests?.children)}</td>
-                                                            <td className='text-xs'>${list.price}</td>
+                                                            <td className='text-xs'>${list.price} (Day)</td>
                                                             <td className='text-xs'>${(+list.additionalPrice.airportPickup) + (+list.additionalPrice.laundry)}</td>
                                                             <td className='text-xs font-bold'>${list.totalPrice}</td>
                                                             <td className='text-xs'><BsFiletypePdf /></td>

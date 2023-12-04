@@ -75,3 +75,14 @@
         }
     }
 }
+
+
+@media (min-width: 300px) {
+
+    #checkIn {
+
+        .rdrMonth {
+            width: 100%;
+        }
+    }
+}
