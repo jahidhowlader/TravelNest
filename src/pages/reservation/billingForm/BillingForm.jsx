@@ -9,6 +9,8 @@ import useAuth from "../../../hooks/useAuth";
 
 const BillingForm = ({ room, totalDays, additionalPrice, totalPrice, guests }) => {
 
+    const [btnDisable, setBtnDisable] = useState(false)
+
     const navigate = useNavigate()
     const { user } = useAuth()
 
@@ -45,7 +47,11 @@ const BillingForm = ({ room, totalDays, additionalPrice, totalPrice, guests }) =
 
         try {
 
+            setBtnDisable(true)
+
             if (isUnavailable) {
+
+                setBtnDisable(false)
                 return toast.error('These dates are not allowed for booking!')
             }
 
@@ -203,7 +209,7 @@ const BillingForm = ({ room, totalDays, additionalPrice, totalPrice, guests }) =
                 </div>
             </div> */}
 
-            <button type="submit" className="px-8 py-2 bg-primary-color text-white uppercase rounded-sm font-medium mt-10" >Reservation</button>
+            <button type="submit" className="px-8 py-2 bg-primary-color text-white uppercase rounded-sm font-medium mt-10" disabled={btnDisable} >{btnDisable ? 'Proccessing' : 'Reservation'}</button>
         </form>
     );
 };

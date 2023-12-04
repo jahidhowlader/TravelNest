@@ -1,5 +1,5 @@
 import { Helmet } from 'react-helmet-async';
-import { Link, useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import useFetchData from '../../hooks/useFetchData';
 import './bookingList.css'
 import { BsFiletypePdf } from "react-icons/bs";
@@ -10,7 +10,12 @@ const BookingList = () => {
 
     const { user } = useAuth()
 
-    const { data: bookingList, loading } = useFetchData(`/booking/${user?.email}`)
+    const { data: bookingList, loading } = useFetchData(`/bookingList/${user?.email}`)
+
+    // handlerPDF
+    const handlerPDF = id => {
+        console.log(id);
+    }
 
     return (
         <>
@@ -56,7 +61,7 @@ const BookingList = () => {
                                                         <th>Room Bill</th>
                                                         <th>Ex: Price</th>
                                                         <th>Total Bill</th>
-                                                        <th>Pdf</th>
+                                                        {/* <th>Pdf</th> */}
                                                     </tr>
                                                 </thead>
                                                 <tbody className="primary-fot font-semibold text-left">
@@ -67,7 +72,10 @@ const BookingList = () => {
                                                             className="">
                                                             <td style={{ paddingLeft: '10px' }}>{idx + 1}.</td>
                                                             <td>
-                                                                <Link to={`/room/${list._id}`}>{list.title}</Link>
+                                                                {/* TODO: course ID */}
+                                                                {/* <Link to={`/room/${list._id}`}> */}
+                                                                    {list.title}
+                                                                {/* </Link> */}
 
                                                             </td>
 
@@ -79,7 +87,7 @@ const BookingList = () => {
                                                             <td className='text-xs'>${list.price} (Day)</td>
                                                             <td className='text-xs'>${(+list.additionalPrice.airportPickup) + (+list.additionalPrice.laundry)}</td>
                                                             <td className='text-xs font-bold'>${list.totalPrice}</td>
-                                                            <td className='text-xs'><BsFiletypePdf /></td>
+                                                            {/* <td className='text-xs'><BsFiletypePdf onClick={() => handlerPDF(list._id)} /></td> */}
                                                         </tr>)
                                                     }
 

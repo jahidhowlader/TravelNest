@@ -155,19 +155,8 @@ const Sidebar = () => {
                                         About Us
                                     </NavLink>
                                 </li>
-                                
-                                {/*  Booking List*/}
-                                <li className="flex">
-                                    <span>07</span>
-                                    <NavLink
-                                        to="/bookingList"
-                                        className={({ isActive, isPending }) =>
-                                            isPending ? "pending" : isActive ? "list-item font-bold" : "list-item font-medium"
-                                        }
-                                    >
-                                        Booking List
-                                    </NavLink>
-                                </li>
+
+
 
                                 {/* LOGIN AND Logout*/}
                                 {
@@ -184,18 +173,33 @@ const Sidebar = () => {
                                             </NavLink>
                                         </li>
                                     ) : (
-                                        <li className="flex">
-                                            <span>08</span>
-                                            <NavLink
-                                                to="#"
-                                                onClick={handlerLogout}
-                                                className={({ isActive, isPending }) =>
-                                                    isPending ? "pending" : isActive ? "list-item " : "list-item font-medium"
-                                                }
-                                            >
-                                                Logout
-                                            </NavLink>
-                                        </li>
+                                        <>
+                                            {/*  Booking List*/}
+                                            <li className="flex">
+                                                <span>07</span>
+                                                <NavLink
+                                                    to="/bookingList"
+                                                    className={({ isActive, isPending }) =>
+                                                        isPending ? "pending" : isActive ? "list-item font-bold" : "list-item font-medium"
+                                                    }
+                                                >
+                                                    Booking List
+                                                </NavLink>
+                                            </li>
+                                            
+                                            <li className="flex">
+                                                <span>08</span>
+                                                <NavLink
+                                                    to="#"
+                                                    onClick={handlerLogout}
+                                                    className={({ isActive, isPending }) =>
+                                                        isPending ? "pending" : isActive ? "list-item " : "list-item font-medium"
+                                                    }
+                                                >
+                                                    Logout
+                                                </NavLink>
+                                            </li>
+                                        </>
                                     )
                                 }
 
