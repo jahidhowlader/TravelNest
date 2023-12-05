@@ -9,6 +9,7 @@ import Hairdryer from '../../../components/icons/Hairdryer';
 import Iron from '../../../components/icons/Iron';
 import Kettle from '../../../components/icons/Kettle';
 import Locker from '../../../components/icons/Locker';
+import { motion } from "framer-motion"
 
 const settings = {
     dots: true,
@@ -19,6 +20,21 @@ const settings = {
     arrows: false,
 }
 
+
+const variants = {
+    initial: {
+        y: 50,
+        opacity: 0
+    },
+    animate: {
+        y: 0,
+        opacity: 1,
+        transition: {
+            duration: 1
+        }
+    }
+}
+
 const RoomCart = ({ room }) => {
 
     const { _id, title, photos, description, price } = room
@@ -26,8 +42,10 @@ const RoomCart = ({ room }) => {
 
 
     return (
-        <div
+        <motion.div
             className='border border-gray border-opacity-[0.15] grid lg:grid-cols-12 items-center'
+            variants={variants} initial="initial" whileInView="animate"
+
         >
             {/* IMAGE */}
 
@@ -74,7 +92,7 @@ const RoomCart = ({ room }) => {
                     </button>
                 </Link>
             </div>
-        </div>
+        </motion.div>
     );
 };
 
