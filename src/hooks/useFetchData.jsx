@@ -11,7 +11,7 @@ const useFetchData = (url) => {
         const fetchData = async () => {
             setLoading(true);
             try {
-                const res = await axios.get(`https://travelnest-server-production.up.railway.app/api${url}`);
+                const res = await axios.get(`https://travelnest-client.web.app/api${url}`);
                 setData(res.data);
             } catch (err) {
                 setError(err);

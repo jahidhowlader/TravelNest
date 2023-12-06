@@ -15,7 +15,7 @@ const BookingList = () => {
 
         setLoading(true)
 
-        fetch(`https://travelnest-server-production.up.railway.app/api/bookingList/${user?.email}`, {
+        fetch(`https://travelnest-client.web.app/api/bookingList/${user?.email}`, {
             method: 'GET',
             credentials: 'include',
         })

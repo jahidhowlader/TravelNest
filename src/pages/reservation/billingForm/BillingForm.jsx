@@ -57,12 +57,12 @@ const BillingForm = ({ room, totalDays, additionalPrice, totalPrice, guests }) =
 
             try {
 
-                await axios.put(`https://travelnest-server-production.up.railway.app/api/room/availability/${room._id}`, {
+                await axios.put(`https://travelnest-client.web.app/api/room/availability/${room._id}`, {
                     dates: totalDays
                 }) //updateRoomAvailability
 
                 try {
-                    await axios.post(`https://travelnest-server-production.up.railway.app/api/booking`, {
+                    await axios.post(`https://travelnest-client.web.app/api/booking`, {
                         roomNumbers: room?.roomNumbers,
                         roomId: room?._id,
                         title: room?.title,

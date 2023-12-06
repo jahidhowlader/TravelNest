@@ -36,7 +36,7 @@ const Login = () => {
 
         try {
 
-            const res = await axios.post("https://travelnest-server-production.up.railway.app/api/auth/login", { email, password }, {
+            const res = await axios.post("https://travelnest-client.web.app/api/auth/login", { email, password }, {
                 withCredentials: true,
             });
 

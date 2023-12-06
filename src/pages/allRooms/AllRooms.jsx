@@ -45,7 +45,7 @@ const AllRooms = () => {
 
         setOpenOptions(false)
 
-        const searchResult = await axios(`https://travelnest-server-production.up.railway.app/api/rooms?room=${options.room}&adult=${options.adult}&children=${options.children}`)
+        const searchResult = await axios(`https://travelnest-client.web.app/api/rooms?room=${options.room}&adult=${options.adult}&children=${options.children}`)
         setRooms(searchResult.data)
     }
 
