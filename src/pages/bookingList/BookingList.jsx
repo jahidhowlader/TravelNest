@@ -26,11 +26,6 @@ const BookingList = () => {
 
     }, [user])
 
-    // handlerPDF
-    const handlerPDF = id => {
-        console.log(id);
-    }
-
     return (
         <>
             {/* Ttile */}

@@ -10,11 +10,6 @@ import useAuth from "../../../hooks/useAuth";
 
 const Login = () => {
 
-    // 
-
-
-    // 
-
     // All State are here
     const [seePassword, setSeePassword] = useState(false)
     const [signinError, setSigninError] = useState(false)
