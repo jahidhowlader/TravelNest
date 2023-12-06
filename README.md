@@ -1,8 +1,23 @@
-# React + Vite
+# Text Editor
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### Live Server Link: [https://travelnest-client.web.app](https://travelnest-client.web.app)
 
-Currently, two official plugins are available:
+Explore a wide variety of rooms, from luxury hotels to charming bed and breakfasts. With a user-friendly interface, secure bookings, and insightful reviews, I make finding and booking your ideal stay a breeze.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+* **User-Friendly Interface:** My intuitive and user-friendly interface allows you to effortlessly browse available rooms, filter by preference, and find the perfect accommodation for your trip.
+
+* **Secure Bookings:**  Rest assured knowing your bookings are secure and reliable. I prioritize your privacy and work with trusted partners to ensure a seamless booking process.
+
+* **Filtering:** The platform allows seamless room selection by offering intuitive filters for adults, children, and room quantity.
+
+* **Authentication:**  Authentication is implemented with Node.js and JSON Web Token.
+
+* **Overall Performence** <br> <br> ![alt Performence](https://i.ibb.co/sgygC2m/Screenshot-4.png)
+
+### Use Technology and Tools
+    - React
+    - Tailwind
+    - Node
+    - Express
+    - MongoDB
+    - JWT
