@@ -12,7 +12,7 @@ const Login = () => {
 
     // 
 
-    
+
     // 
 
     // All State are here
@@ -41,7 +41,9 @@ const Login = () => {
 
         try {
 
-            const res = await axios.post("https://travelnest-server-production.up.railway.app/api/auth/login", { email, password });
+            const res = await axios.post("https://travelnest-server-production.up.railway.app/api/auth/login", { email, password }, {
+                withCredentials: true,
+            });
 
             dispatch({ type: "CREDENTIAL_SUCCESS", payload: res.data.details });
             reset()

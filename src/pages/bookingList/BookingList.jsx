@@ -1,16 +1,30 @@
 import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import useFetchData from '../../hooks/useFetchData';
-import './bookingList.css'
-import { BsFiletypePdf } from "react-icons/bs";
 import Loader from '../../components/loader/Loader';
 import useAuth from '../../hooks/useAuth';
+import { useEffect, useState } from 'react';
+import './bookingList.css'
 
 const BookingList = () => {
 
     const { user } = useAuth()
 
-    const { data: bookingList, loading } = useFetchData(`/bookingList/${user?.email}`)
+    const [bookingList, setDataList] = useState([])
+    const [loading, setLoading] = useState(true)
+
+    useEffect(() => {
+
+        setLoading(true)
+
+        fetch(`https://travelnest-server-production.up.railway.app/api/bookingList/${user?.email}`, {
+            method: 'GET',
+            credentials: 'include',
+        })
+            .then(res => res.json())
+            .then(data => setDataList(data))
+
+        setLoading(false)
+
+    }, [user])
 
     // handlerPDF
     const handlerPDF = id => {
@@ -74,7 +88,7 @@ const BookingList = () => {
                                                             <td>
                                                                 {/* TODO: course ID */}
                                                                 {/* <Link to={`/room/${list._id}`}> */}
-                                                                    {list.title}
+                                                                {list.title}
                                                                 {/* </Link> */}
 
                                                             </td>
