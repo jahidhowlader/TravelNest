@@ -1,4 +1,4 @@
-# Text Editor
+# TravelNest
 
 ### Live Server Link: [https://travelnest-client.web.app](https://travelnest-client.web.app)
 
